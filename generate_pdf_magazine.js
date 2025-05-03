@@ -1,46 +1,63 @@
+// generate_pdf_magazine.js - Versión Completa y Corregida
+
 const fs = require('fs').promises;
 const path = require('path');
 const puppeteer = require('puppeteer');
 const yargs = require('yargs/yargs');
 const { hideBin } = require('yargs/helpers');
-const { URL } = require('url'); // Para manejar file:// URLs si es necesario
+const { URL } = require('url');
 
-// --- Funciones Auxiliares ---
+// --- Manejadores Globales de Errores (Para Depuración) ---
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+  console.error('!!! ERROR: Promesa no manejada rechazada !!!');
+  console.error('Razón:', reason);
+  // console.error('Promesa:', promise); // Descomentar para más detalles
+  console.error('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+  process.exit(1);
+});
+
+process.on('uncaughtException', (error) => {
+  console.error('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+  console.error('!!! ERROR: Excepción no capturada !!!');
+  console.error(error);
+  console.error('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+  process.exit(1);
+});
+
+
+// --- Funciones Auxiliares de Carga ---
 
 async function loadJsonData(filepath) {
   try {
     const absolutePath = path.resolve(filepath);
-    // console.log(`Cargando datos desde: ${absolutePath}`); // Descomentar para debug
     const fileContent = await fs.readFile(absolutePath, 'utf-8');
     const data = JSON.parse(fileContent);
     if (!Array.isArray(data)) {
-      console.warn(`Advertencia: JSON ${filepath} no es un array.`);
+      console.warn(`! Warn: JSON ${path.basename(filepath)} no es un array.`);
       return null;
     }
-    console.log(`-> OK: Se cargaron ${data.length} publicaciones desde ${path.basename(filepath)}.`);
+    // Log de éxito ahora se hace en el bucle principal
     return data;
   } catch (error) {
-    if (error.code === 'ENOENT') {
-      console.error(`Error: Archivo no encontrado en ${filepath}`);
-    } else if (error instanceof SyntaxError) {
-      console.error(`Error: No se pudo decodificar JSON desde ${filepath}. Revisa el formato (no comentarios, no comas finales).`);
-    } else {
-      console.error(`Error inesperado al leer ${filepath}: ${error.message}`);
-    }
+    // Loguear el error específico del archivo
+    console.error(`!! Error procesando ${path.basename(filepath)}: ${error.message}`);
+    // Decidimos retornar null para intentar continuar con otros archivos
     return null;
   }
 }
 
-// --- Formateo de Datos ---
+// --- Agrupación de Datos ---
 
 function groupPubsByCategory(publications) {
   const grouped = {};
   if (!publications || publications.length === 0) return grouped;
-  // Mapeo de slugs a nombres (Personalizar según sea necesario)
+  // Mapeo de slugs a nombres (¡Personaliza y completa!)
    const categoryNames = {
      'inmuebles': 'Inmuebles', 'vehiculos': 'Vehículos', 'empleos': 'Empleos',
      'servicios': 'Servicios', 'productos': 'Productos', 'mascotas': 'Mascotas',
-     'comunidad': 'Comunidad', 'negocios': 'Negocios', /* ... añadir más ... */
+     'comunidad': 'Comunidad', 'negocios': 'Negocios',
+     'sin-categoria': 'Sin Categoría' // Para los que no tengan slug
    };
   publications.forEach(pub => {
     const categorySlug = pub.categorySlug || 'sin-categoria';
@@ -48,44 +65,65 @@ function groupPubsByCategory(publications) {
     if (!grouped[categoryDisplayName]) grouped[categoryDisplayName] = [];
     grouped[categoryDisplayName].push(pub);
   });
-  console.log(`Publicaciones agrupadas en ${Object.keys(grouped).length} categorías.`);
+  console.log(`\nPublicaciones agrupadas en ${Object.keys(grouped).length} categorías.`);
   return grouped;
 }
 
+// --- Funciones de Formateo de Datos para HTML ---
+
+function cleanPhoneNumber(phone) {
+    let cleaned = phone.replace(/[^0-9]/g, '');
+    if (cleaned.length === 9 && !cleaned.startsWith('51')) {
+        cleaned = '51' + cleaned;
+    }
+    return cleaned;
+}
+
 function formatPrice(pub) {
-  const amount = pub.amount;
-  const currency = pub.currency;
-  const negotiable = pub.negotiable || false;
-  let priceStr = "Consultar Precio";
-  if (amount === 0) priceStr = "Gratis";
-  else if (amount !== null && amount !== undefined) {
-    const currencySymbol = currency === 'PEN' ? 'S/' : currency === 'USD' ? '$' : '';
-    try { priceStr = `${currencySymbol} ${new Intl.NumberFormat('es-PE', { style: 'decimal', minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(amount)}`; }
-    catch (e) { priceStr = `${currencySymbol} ${amount}`; }
-  }
-  if (negotiable && amount !== null && amount !== undefined) priceStr += " (Negociable)";
-  return priceStr;
+    const amount = pub.amount;
+    const currency = pub.currency;
+    const negotiable = pub.negotiable || false;
+    let priceStr = "Consultar Precio";
+    if (amount === 0) priceStr = "Gratis";
+    else if (amount !== null && amount !== undefined) {
+        const currencySymbol = currency === 'PEN' ? 'S/' : currency === 'USD' ? '$' : '';
+        try { priceStr = `${currencySymbol} ${new Intl.NumberFormat('es-PE', { style: 'decimal', minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(amount)}`; }
+        catch (e) { priceStr = `${currencySymbol} ${amount}`; }
+    }
+    if (negotiable && amount !== null && amount !== undefined) priceStr += " (Negociable)";
+    return priceStr;
 }
 
 function formatLocation(pub) {
-  const loc = pub.location || {};
-  const parts = [];
-  if (loc.district) parts.push(`${loc.district}`);
-  if (loc.address) parts.push(loc.address);
-  if (loc.referencePoint) parts.push(`(Ref: ${loc.referencePoint})`);
-  const locationString = parts.filter(Boolean).join(', ');
-  // Añadir ícono usando HTML (simple)
-  return locationString ? `<span class="icon-location">📍</span> ${locationString}` : '';
+    const loc = pub.location || {};
+    const parts = [];
+    if (loc.district) parts.push(`${loc.district}`);
+    if (loc.address) parts.push(loc.address);
+    if (loc.referencePoint) parts.push(`(Ref: ${loc.referencePoint})`);
+    const locationString = parts.filter(Boolean).join(', ');
+    return locationString ? `<span class="icon-location">📍</span> ${locationString}` : '';
 }
 
 function formatContact(pub) {
-  const contact = pub.contact || {};
-  const parts = [];
-  // Añadir íconos simples directamente
-  if (contact.name) parts.push(`<span class="contact-name">👤 ${contact.name}</span>`);
-  if (contact.phones && contact.phones.length > 0) parts.push(`<span class="contact-phone">📞 Tel: ${contact.phones.join(' / ')}</span>`);
-  if (contact.email) parts.push(`<span class="contact-email">✉️ Email: ${contact.email}</span>`);
-  return parts.filter(Boolean).join('<br>');
+    const contact = pub.contact || {};
+    const parts = [];
+    // Mensaje predeterminado para WhatsApp (URL encoded)
+    const defaultMessage = encodeURIComponent(`Hola, vi tu anuncio "${pub.title || '...'}" en Buscadis. Quisiera más información.`);
+
+    if (contact.name) parts.push(`<span class="contact-name">👤 ${contact.name}</span>`);
+    if (contact.phones && contact.phones.length > 0) {
+        const phoneLinks = contact.phones.map(phone => {
+        const cleanedPhone = cleanPhoneNumber(phone);
+        // Solo genera link si el número es válido tras limpiar
+        if (cleanedPhone && cleanedPhone.startsWith('51') && cleanedPhone.length >= 11) {
+            return `<a href="https://wa.me/${cleanedPhone}?text=${defaultMessage}" class="whatsapp-link" target="_blank">${phone}</a>`;
+        }
+        return phone; // Mostrar como texto si no es válido para WA
+        }).join(' / ');
+        parts.push(`<span class="contact-phone">📞 Tel: ${phoneLinks}</span>`);
+    }
+    if (contact.email) parts.push(`<span class="contact-email">✉️ Email: <a href="mailto:${contact.email}">${contact.email}</a></span>`);
+    return parts.filter(Boolean).join('<br>');
 }
 
 function formatAttributes(pub) {
@@ -93,43 +131,17 @@ function formatAttributes(pub) {
     if (!attrs || typeof attrs !== 'object' || Object.keys(attrs).length === 0) return "";
     let html = '<ul class="attributes">\n';
     for (const [key, value] of Object.entries(attrs)) {
-        // Omitir claves si el valor es null, undefined o string vacío
         if (value !== null && value !== undefined && value !== '') {
-            // Mapeo de claves a etiquetas más legibles
             let label = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-            const mappings = {
-                'area_m2': 'Área m²', 'ano': 'Año', 'kilometraje': 'Km.',
-                'banos': 'Baños', 'dormitorios': 'Dorm.', 'cocheras': 'Coch.',
-                'experiencia_requerida': 'Experiencia', 'servicios_incluidos': 'Incluye',
-                'area_terreno_m2': 'Área Terreno m²', 'area_construida_m2': 'Área Const. m²',
-                'publico_objetivo': 'Ideal para', 'requisitos': 'Req.',
-                'conocimientos': 'Conocim.', 'puestos_requeridos': 'Puestos',
-                'nivel_educacion': 'Educación', 'modalidad_trabajo': 'Modalidad',
-                'tipo_contrato': 'Contrato', 'horario': 'Horario', 'estado': 'Estado',
-                'condicion': 'Condición', 'marca': 'Marca', 'modelo': 'Modelo',
-                // Añade más mapeos comunes aquí
-            };
+            const mappings = { /* ... tus mapeos ... */ 'area_m2': 'Área m²', 'ano': 'Año', 'kilometraje': 'Km.', 'banos': 'Baños', 'dormitorios': 'Dorm.', 'cocheras': 'Coch.', 'experiencia_requerida': 'Experiencia', 'servicios_incluidos': 'Incluye', 'area_terreno_m2': 'Área Terreno m²', 'area_construida_m2': 'Área Const. m²', 'publico_objetivo': 'Ideal para', 'requisitos': 'Req.', 'conocimientos': 'Conocim.', 'puestos_requeridos': 'Puestos', 'nivel_educacion': 'Educación', 'modalidad_trabajo': 'Modalidad', 'tipo_contrato': 'Contrato', 'horario': 'Horario', 'estado': 'Estado', 'condicion': 'Condición', 'marca': 'Marca', 'modelo': 'Modelo' };
             label = mappings[key] || label;
-
-            // Formateo del valor
-            let valueStr;
-            if (typeof value === 'boolean') {
-                valueStr = value ? 'Sí' : 'No';
-            } else if (Array.isArray(value)) {
-                 // Formatear arrays de forma legible, reemplazando guiones bajos
-                 valueStr = value.map(item => String(item).replace(/_/g, ' ')).join(', ');
-            } else {
-                valueStr = String(value);
-                 // Acortar strings largos si es necesario
-                 if (valueStr.length > 40 && ['lista_servicios', 'requisitos_generales', 'puestos_requeridos', 'infraestructura_existente'].includes(key)) {
-                     valueStr = valueStr.substring(0, 37) + '...';
-                 }
-            }
+            let valueStr = typeof value === 'boolean' ? (value ? 'Sí' : 'No') : (Array.isArray(value) ? value.map(item => String(item).replace(/_/g, ' ')).join(', ') : String(value));
+            if (valueStr.length > 40 && ['lista_servicios', 'requisitos_generales', 'puestos_requeridos', 'infraestructura_existente'].includes(key)) valueStr = valueStr.substring(0, 37) + '...';
             html += `  <li><span class="attr-label">${label}:</span> <span class="attr-value">${valueStr}</span></li>\n`;
         }
     }
     html += '</ul>\n';
-    return html.includes('<li>') ? html : ''; // Solo devolver si la lista tiene elementos
+    return html.includes('<li>') ? html : '';
 }
 
 function formatPublicationHtml(pub) {
@@ -137,479 +149,260 @@ function formatPublicationHtml(pub) {
     const description = pub.description || '';
     const images = pub.images || [];
     let imageHtml = "";
-
-    // Procesamiento de imágenes
     if (images && Array.isArray(images) && images.length > 0 && images[0]) {
         let imageUrl = images[0];
         if (imageUrl.startsWith('http:') || imageUrl.startsWith('https:')) {
             imageHtml = `<div class="pub-image-container"><img src="${imageUrl}" alt="" class="pub-image"></div>\n`;
         } else {
             try {
-                // Intenta resolver como ruta local absoluta y convertir a file:// URL
                 const absolutePath = path.resolve(imageUrl);
-                // Reemplaza backslashes por forward slashes para compatibilidad URL
                 imageUrl = new URL(`file:///${absolutePath.replace(/\\/g, '/')}`).href;
                 imageHtml = `<div class="pub-image-container"><img src="${imageUrl}" alt="" class="pub-image"></div>\n`;
-            } catch (err) {
-                console.warn(`! Img Warn: No se pudo resolver la ruta local: ${images[0]}`);
-                imageHtml = ""; // No incluir imagen si falla
-            }
+            } catch (err) { console.warn(`! Img Warn: No se pudo resolver ruta local: ${images[0]}`); imageHtml = ""; }
         }
     }
-
     const priceHtml = `<div class="pub-price">${formatPrice(pub)}</div>`;
-    // Asegurar que location y contact solo se añaden si tienen contenido
     const locationString = formatLocation(pub);
     const locationHtml = locationString ? `<div class="pub-location">${locationString}</div>` : '';
     const contactString = formatContact(pub);
     const contactHtml = contactString ? `<div class="pub-contact">${contactString}</div>` : '';
     const attributesHtml = formatAttributes(pub);
-
     let createdAtStr = "";
-    if (pub.createdAt) { // Solo mostrar si existe createdAt
-        try {
-            createdAtStr = `<div class="pub-date">Pub: ${new Date(pub.createdAt).toLocaleDateString('es-PE', { day: '2-digit', month: '2-digit', year: '2-digit' })}</div>`;
-        } catch (e) { /* Ignorar fecha inválida */ }
-    }
-
-    const pubId = pub._id ? ` id="pub-${pub._id}"` : ''; // Añadir ID si existe
-
-    // Estructura HTML mejorada
+    if (pub.createdAt) { try { createdAtStr = `<div class="pub-date">Pub: ${new Date(pub.createdAt).toLocaleDateString('es-PE', { day: '2-digit', month: '2-digit', year: '2-digit' })}</div>`; } catch (e) {} }
+    const pubId = pub._id ? ` id="pub-${pub._id}"` : '';
     return `
-      <article class="publication"${pubId}>
-        ${imageHtml}
-        <div class="pub-content">
-          <h3 class="pub-title">${title}</h3>
-          ${priceHtml}
-          <div class="pub-body">
-              ${description ? `<p class="pub-description">${description}</p>` : ''}
-              ${attributesHtml}
-          </div>
-          <div class="pub-footer">
-              ${locationHtml}
-              ${contactHtml}
-              ${createdAtStr}
-          </div>
-        </div>
-      </article>
-    `;
+      <article class="publication"${pubId}> ${imageHtml} <div class="pub-content"> <h3 class="pub-title">${title}</h3> ${priceHtml}
+          <div class="pub-body"> ${description ? `<p class="pub-description">${description}</p>` : ''} ${attributesHtml} </div>
+          <div class="pub-footer"> ${locationHtml} ${contactHtml} ${createdAtStr} </div>
+      </div> </article> `;
 }
-
 
 // --- Generación de HTML y CSS ---
 
-function generateMagazineHtml(groupedPubs, magazineTitle) {
+function generateMagazineHtml(groupedPubs, magazineTitle, styleOverrides = {}) {
+    // Define colores base y permite overrides
+    const baseColors = { primary: '#004a8f', secondary: '#e8f0f7', accent: '#007bff', text: '#212529', textLight: '#495057', textLighter: '#6c757d', border: '#dee2e6' };
+    const colors = { ...baseColors, ...styleOverrides };
 
-    // **CSS COMPLETO Y MEJORADO**
+    // **CSS COMPLETO Y MEJORADO** (Incluido aquí directamente)
     const cssStyles = `
-      /* Importar Fuente (Ejemplo: Lato desde Google Fonts) */
-      @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
-
-      /* Variables CSS para fácil personalización */
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@300;400;500&display=swap');
       :root {
-        --font-family-sans: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        --primary-color: #004a8f; /* Azul Buscadis más oscuro */
-        --secondary-color: #e8f0f7; /* Azul muy pálido para fondos */
-        --accent-color: #007bff; /* Azul más brillante */
-        --text-color: #212529; /* Casi negro */
-        --text-color-light: #495057; /* Gris oscuro */
-        --text-color-lighter: #6c757d; /* Gris */
-        --border-color: #dee2e6; /* Borde gris claro */
-        --column-gap: 1cm;
-        --page-margin: 1.5cm;
+        --font-family-headings: 'Poppins', sans-serif; --font-family-body: 'Roboto', sans-serif;
+        --primary-color: ${colors.primary}; --secondary-color: ${colors.secondary}; --accent-color: ${colors.accent};
+        --text-color: ${colors.text}; --text-color-light: ${colors.textLight}; --text-color-lighter: ${colors.textLighter};
+        --border-color: ${colors.border}; --column-gap: 0.8cm; --page-margin: 1.5cm;
+        --ad-bg-color: #ffffff; --ad-border-radius: 5px; --ad-shadow: 0 2px 5px rgba(0,0,0,0.08);
       }
-
-      @page {
-        size: A4;
-        margin: var(--page-margin);
-
-        @bottom-center {
-          content: "Página " counter(page) " de " counter(pages);
-          font-family: var(--font-family-sans);
-          font-size: 8pt;
-          color: var(--text-color-lighter);
-          vertical-align: top;
-          padding-top: 5pt;
-        }
-
-        @top-center {
-          content: element(header);
-          font-family: var(--font-family-sans);
-          font-size: 9pt;
-          color: var(--text-color-light);
-          vertical-align: bottom;
-          padding-bottom: 8pt;
-          border-bottom: 0.5pt solid var(--border-color);
-          margin-bottom: 15pt;
-        }
-      } /* Fin @page */
-
-      body {
-        font-family: var(--font-family-sans);
-        line-height: 1.45;
-        color: var(--text-color);
-        font-size: 9pt;
-        font-weight: 400;
-         /* Habilitar columnas */
-         column-count: 2;
-         column-gap: var(--column-gap);
-         column-fill: auto; /* Permitir flujo natural, no forzar balance */
-         widows: 3; /* Evitar líneas huérfanas */
-         orphans: 3; /* Evitar líneas viudas */
+      @page { size: A4; margin: var(--page-margin);
+        @bottom-center { content: "Página " counter(page) " / " counter(pages); font-family: var(--font-family-body); font-size: 8pt; color: #aaa; padding-top: 5pt; vertical-align: top; }
+        @top-center { content: element(header); font-family: var(--font-family-body); font-size: 9pt; color: var(--text-color-light); vertical-align: bottom; padding-bottom: 8pt; border-bottom: 0.5pt solid var(--border-color); margin-bottom: 15pt; }
       }
-
-      .magazine-header {
-        position: running(header);
-        text-align: center;
-        font-weight: 400;
-      }
-
-      /* Título Principal */
-      h1.main-title {
-        text-align: center;
-        color: var(--primary-color);
-        font-weight: 700;
-        font-size: 22pt;
-        margin-bottom: 0.8cm;
-        border-bottom: 1pt solid var(--primary-color);
-        padding-bottom: 0.2cm;
-        /* Ocupar ambas columnas */
-         column-span: all;
-         /* Intentar que no quede solo en una página */
-         page-break-after: avoid;
-         break-after: column; /* Empezar contenido en columna nueva */
-      }
-
-       /* Contenedor principal */
-       main.content-wrapper {
-         /* No necesita columnas si body las tiene */
-       }
-
-      /* Títulos de Categoría */
-      .category-section h2 {
-        background-color: var(--secondary-color);
-        color: var(--primary-color);
-        padding: 0.25cm 0.4cm;
-        margin: 0.8cm 0 0.4cm 0;
-        border-left: 3pt solid var(--primary-color);
-        font-size: 13pt;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-         /* Ocupar ambas columnas */
-         column-span: all;
-         /* Control de saltos */
-         break-before: column; /* Preferible empezar en nueva columna */
-         break-after: avoid; /* No cortar justo después */
-         page-break-before: auto;
-         page-break-after: avoid;
-      }
-       /* Evitar salto antes de la primera categoría */
-       section.category-section:first-of-type h2 {
-           break-before: avoid;
-           page-break-before: avoid;
-           margin-top: 0;
-       }
-
-
-      /* Estilo de cada Publicación */
-      .publication {
-        border: 1pt solid var(--border-color);
-        background-color: #ffffff;
-        padding: 0.35cm;
-        margin-bottom: 0.5cm;
-        border-radius: 3px;
-        overflow: hidden; /* Evitar desbordamientos */
-         /* ¡CLAVE! Evitar que el anuncio se rompa */
-         break-inside: avoid;
-         page-break-inside: avoid;
-         /* Layout Flexbox */
-         display: flex;
-         flex-direction: row;
-         gap: 0.35cm;
-      }
-       .publication:last-child { margin-bottom: 0; }
-
-       /* Contenedor de Imagen */
-       .pub-image-container {
-         flex-shrink: 0;
-         width: 70px;
-         display: flex;
-         align-items: center; /* Centrar imagen verticalmente */
-         justify-content: center; /* Centrar imagen horizontalmente */
-         overflow: hidden; /* Asegurar que no se salga */
-       }
-       .pub-image {
-         display: block; /* Asegurar que es bloque */
-         width: 100%;
-         height: auto;
-         max-height: 70px; /* Limitar altura */
-         object-fit: cover; /* Cubrir espacio sin distorsionar */
-         border-radius: 2px;
-         border: 1pt solid #f0f0f0; /* Borde muy sutil en imagen */
-       }
-
-      /* Contenedor del Contenido Principal */
-       .pub-content {
-           flex-grow: 1;
-           display: flex;
-           flex-direction: column;
-           /* No usar justify-content: space-between; para evitar mucho espacio */
-       }
-
-      /* Título del anuncio */
-      .pub-title {
-        margin-top: 0;
-        margin-bottom: 0.15cm;
-        color: var(--primary-color);
-        font-size: 10.5pt;
-        font-weight: 700;
-        line-height: 1.25;
-      }
-
-      /* Precio */
-      .pub-price {
-        font-weight: 700;
-        color: var(--accent-color);
-        margin-bottom: 0.2cm;
-        font-size: 10pt;
-      }
-
-      /* Cuerpo: Descripción y Atributos */
-      .pub-body {
-          margin-bottom: 0.25cm;
-          flex-grow: 1; /* Ocupar espacio disponible */
-      }
-
-      /* Descripción */
-      .pub-description {
-        margin-bottom: 0.25cm;
-        font-size: 8.5pt;
-        line-height: 1.4;
-        font-weight: 400;
-        color: var(--text-color-light);
-        text-align: left;
-      }
-
-      /* Footer del anuncio: Location, Contact, Date */
-      .pub-footer {
-          border-top: 0.5pt solid var(--border-color); /* Borde más visible */
-          padding-top: 0.25cm;
-          margin-top: 0.3cm; /* Espacio antes del footer */
-      }
-
-      /* Location, Contact, Date */
-      .pub-location, .pub-contact, .pub-date {
-        font-size: 8pt;
-        color: var(--text-color-lighter);
-        margin-bottom: 0.1cm;
-        line-height: 1.3;
-        font-weight: 400;
-        display: flex;
-        align-items: flex-start; /* Alinear al inicio para íconos */
-        gap: 4px;
-      }
-      .pub-contact span { display: block; }
-      .pub-contact span:not(:last-child) { margin-bottom: 2px; }
-      .pub-date { margin-top: 2px; text-align: right; display: block;} /* Fecha al final y a la derecha */
-
-       /* Iconos simples */
-       .icon-location::before { content: '📍 '; vertical-align: middle;}
-       .icon-user::before { content: '👤 '; vertical-align: middle;}
-       .icon-phone::before { content: '📞 '; vertical-align: middle;}
-       .icon-email::before { content: '✉️ '; vertical-align: middle;}
-
-
-      /* Lista de Atributos */
-      .attributes {
-        list-style: none;
-        padding: 0.2cm 0 0.1cm 0;
-        margin: 0.25cm 0;
-        font-size: 8pt;
-        color: var(--text-color-light);
-        /* Columnas para atributos */
-         column-count: 2;
-         column-gap: 0.8cm;
-         break-inside: avoid;
-         border-top: none; /* Sin borde superior */
-      }
-      .attributes li {
-        margin-bottom: 0.15cm;
-         break-inside: avoid;
-         page-break-inside: avoid;
-         display: block; /* Para layout de columnas */
-         line-height: 1.3;
-      }
-      .attributes .attr-label {
-        color: var(--text-color);
-        font-weight: 700;
-        margin-right: 4px;
-      }
-       .attributes .attr-value {
-           font-weight: 400;
-           color: var(--text-color-light);
-           /* word-break: break-all; */ /* Opcional: romper palabras largas */
-       }
-
-      footer {
-        /* Footer principal manejado por @page bottom-center */
-      }
-    `; // Fin de cssStyles
+      body { font-family: var(--font-family-body); line-height: 1.45; color: var(--text-color); font-size: 8.5pt; font-weight: 300; column-count: 2; column-gap: var(--column-gap); column-fill: auto; background-color: #f8f9fa; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; widows: 3; orphans: 3; }
+      * { box-sizing: border-box; }
+      .magazine-header { position: running(header); text-align: right; font-weight: 400; font-size: 8.5pt; color: var(--text-color-lighter); }
+      h1.main-title { font-family: var(--font-family-headings); text-align: center; color: var(--primary-color); font-weight: 700; font-size: 20pt; margin-bottom: 0.8cm; border-bottom: 1pt solid var(--primary-color); padding-bottom: 0.2cm; column-span: all; break-after: column; page-break-after: avoid; }
+      main.content-wrapper {}
+      .category-section h2 { background: linear-gradient(135deg, var(--primary-color) 0%, ${colors.accent} 100%); color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); padding: 0.3cm 0.5cm; margin: 1cm 0 0.5cm 0; border-left: none; font-size: 14pt; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border-radius: var(--ad-border-radius) var(--ad-border-radius) 0 0; column-span: all; break-before: column; break-after: avoid; page-break-before: auto; page-break-after: avoid; }
+      section.category-section:first-of-type h2 { break-before: avoid; page-break-before: avoid; margin-top: 0; }
+      .publication { background-color: var(--ad-bg-color); padding: 0.4cm; margin-bottom: 0.6cm; border-radius: var(--ad-border-radius); border: 1pt solid var(--border-color); box-shadow: var(--ad-shadow); overflow: hidden; break-inside: avoid; page-break-inside: avoid; display: flex; flex-direction: column; position: relative; }
+      .publication:last-child { margin-bottom: 0; }
+      .pub-header { display: flex; gap: 0.4cm; align-items: flex-start; margin-bottom: 0.25cm; }
+      .pub-image-container { flex-shrink: 0; width: 75px; height: 75px; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 3px; border: 1pt solid var(--border-color); }
+      .pub-image { display: block; width: 100%; height: 100%; object-fit: cover; }
+      .pub-title-price { flex-grow: 1; }
+      .pub-title { margin: 0 0 0.1cm 0; color: var(--primary-color); font-size: 11pt; font-weight: 600; line-height: 1.3; font-family: var(--font-family-headings); }
+      .pub-price { font-weight: 700; color: var(--accent-color); margin-bottom: 0.2cm; font-size: 10.5pt; }
+      .pub-body { padding-left: 0.1cm; margin-bottom: 0.3cm; flex-grow: 1; }
+      .pub-description { margin-bottom: 0.3cm; font-size: 8.5pt; line-height: 1.5; color: var(--text-color-light); word-wrap: break-word; hyphens: auto; }
+      .pub-footer { border-top: 0.5pt solid var(--border-color); padding-top: 0.25cm; margin-top: auto; }
+      .pub-location, .pub-contact, .pub-date { font-size: 8pt; color: var(--text-color-lighter); margin-bottom: 0.15cm; line-height: 1.3; display: flex; align-items: flex-start; gap: 5px; }
+      .pub-contact span, .pub-contact a { display: inline-block; margin-bottom: 2px; vertical-align: middle; word-break: break-all; } /* Permitir saltos en links largos */
+      .pub-date { font-size: 7.5pt; text-align: right; margin-top: 2px; display: block; }
+      .icon-location::before, .icon-user::before, .icon-phone::before, .icon-email::before { vertical-align: middle; display: inline-block; margin-right: 1px; } /* Estilos íconos */
+      a.whatsapp-link { color: #128C7E; /* Verde WhatsApp más oscuro */ text-decoration: none; font-weight: 500; } a.whatsapp-link:hover { text-decoration: underline; }
+      a[href^="mailto:"] { color: var(--accent-color); text-decoration: none; } a[href^="mailto:"]:hover { text-decoration: underline; }
+      .attributes { list-style: none; padding: 0.2cm 0 0.1cm 0; margin: 0.25cm 0; font-size: 8pt; color: var(--text-color-light); column-count: 2; column-gap: 0.8cm; break-inside: avoid; border-top: none; }
+      .attributes li { margin-bottom: 0.15cm; break-inside: avoid; page-break-inside: avoid; line-height: 1.3; }
+      .attributes .attr-label { color: var(--text-color); font-weight: 600; margin-right: 4px; }
+      .attributes .attr-value { color: var(--text-color-light); }
+      footer { /* Footer manejado por @page */ }
+    `;
 
     let htmlPublicationsContent = "";
-    const sortedCategories = Object.keys(groupedPubs).sort();
+    const categoriesInGroup = Object.keys(groupedPubs);
+    const isSingleCategory = categoriesInGroup.length === 1;
 
-    for (const categoryName of sortedCategories) {
-        htmlPublicationsContent += `    <section class="category-section">\n`;
-        htmlPublicationsContent += `      <h2>${categoryName}</h2>\n`;
+    for (const categoryName of categoriesInGroup.sort()) { // Siempre ordenar por si acaso
         const pubsInCategory = groupedPubs[categoryName];
-        for (const pub of pubsInCategory) {
-        htmlPublicationsContent += formatPublicationHtml(pub);
+        // Solo añadir sección si hay pubs
+        if (pubsInCategory && pubsInCategory.length > 0) {
+             htmlPublicationsContent += `<section class="category-section ${isSingleCategory ? 'single-category' : ''}">\n`;
+             // Añadir título de categoría siempre, da contexto
+             htmlPublicationsContent += `  <h2>${categoryName}</h2>\n`;
+             pubsInCategory.forEach(pub => { htmlPublicationsContent += formatPublicationHtml(pub); });
+             htmlPublicationsContent += '</section>\n';
         }
-        htmlPublicationsContent += '    </section>\n';
     }
 
     const generationDate = new Date().toLocaleDateString('es-PE', { year: 'numeric', month: 'long', day: 'numeric' });
     const fullHtml = `<!DOCTYPE html>
 <html lang="es">
-<head> <meta charset="UTF-8"> <title>${magazineTitle}</title> <style>${cssStyles}</style> </head>
+<head><meta charset="UTF-8"><title>${magazineTitle}</title><style>${cssStyles}</style></head>
 <body>
     <div class="magazine-header">${magazineTitle} - Buscadis.com - ${generationDate}</div>
     <h1 class="main-title">${magazineTitle}</h1>
-    <main class="content-wrapper"> ${htmlPublicationsContent} </main>
+    <main class="content-wrapper">${htmlPublicationsContent}</main>
     <footer></footer>
 </body>
 </html>`;
-    console.log("Estructura HTML avanzada generada.");
+    // console.log("Estructura HTML avanzada generada."); // Log menos verboso
     return fullHtml;
 }
 
-// --- Guardado de PDF ---
+// --- Guardado de PDF (Con log de errores detallado) ---
 async function savePdf(htmlContent, outputFilePath) {
     let browser = null;
+    const fileNameForLog = path.basename(outputFilePath);
     try {
-        console.log("Iniciando Puppeteer...");
+        console.log(`... Iniciando Puppeteer para ${fileNameForLog}`);
         browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-gpu', '--font-render-hinting=none'] });
         const page = await browser.newPage();
-        console.log("Estableciendo contenido HTML...");
+        page.on('pageerror', error => console.error(`!! Page Error (${fileNameForLog}): ${error.message}`));
+        page.on('requestfailed', request => console.error(`!! Request Failed (${fileNameForLog}): ${request.url()} - ${request.failure()?.errorText}`)); // Added null check for safety
         await page.setContent(htmlContent, { waitUntil: 'networkidle0', timeout: 90000 });
         await page.emulateMediaType('print');
-        console.log(`Generando PDF: ${outputFilePath}`);
         await page.pdf({ path: outputFilePath, format: 'A4', printBackground: true, displayHeaderFooter: true, headerTemplate: `<span></span>`, footerTemplate: `<span></span>`, margin: { top: '0cm', right: '0cm', bottom: '0cm', left: '0cm' }, preferCSSPageSize: true });
-        console.log(`PDF generado exitosamente: ${outputFilePath}`);
+        console.log(`-> PDF Generado: ${fileNameForLog}`);
         return true;
     } catch (error) {
-        console.error("Error generando PDF con Puppeteer:", error);
+        console.error(`\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!`);
+        console.error(`!! ERROR generando PDF ${fileNameForLog}:`);
+        console.error(`!! Mensaje: ${error.message}`);
+        console.error(`!! Stack Trace:`);
+        console.error(error.stack); // Imprimir stack trace completo
+        console.error(`!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n`);
         return false;
     } finally {
-        if (browser) {
-            console.log("Cerrando Puppeteer...");
-            await browser.close();
-        }
+        if (browser) { await browser.close(); }
     }
 }
 
-// --- Ejecución Principal ---
+// --- Ejecución Principal (Carga Directorio, Genera por Categoría) ---
 async function main() {
     const argv = yargs(hideBin(process.argv))
         .scriptName("generate_pdf_magazine.js")
         .usage('Uso: $0 [opciones] <directorio_con_json>')
-        // Definir comando principal y su argumento posicional
-        .command('$0 <inputDir>', 'Genera la revista PDF desde archivos JSON en un directorio', (yargs) => {
-             yargs.positional('inputDir', {
-                 describe: 'Directorio que contiene los archivos JSON',
-                 type: 'string',
-                 normalize: true // Normaliza la ruta (ej. / a \ en Windows)
-             })
+        .command('$0 <inputDir>', 'Genera PDFs de revista (uno por categoría) desde archivos JSON en un directorio', (yargs) => {
+             yargs.positional('inputDir', { describe: 'Directorio que contiene los archivos JSON', type: 'string', normalize: true })
          })
-        .option('o', {
-            alias: 'output',
-            description: 'Ruta del archivo PDF de salida',
-            type: 'string',
-            default: 'buscadis_revista_premium.pdf',
-            normalize: true
-        })
-         .option('t', {
-             alias: 'title',
-             description: 'Título para la revista PDF',
-             type: 'string',
-             default: 'Revista de Clasificados Buscadis'
-         })
-        .help('h')
-        .alias('h', 'help')
-        .strict() // Ayuda a detectar errores en argumentos
-        .fail((msg, err, yargs) => { // Manejo de errores de Yargs más informativo
-            console.error("Error en los argumentos proporcionados:");
-            console.error(msg);
-            console.error("\nUso correcto:");
-            console.error(yargs.help());
-            process.exit(1);
-        })
-        .parse(); // Usar parse() para que funcione .command()
+        .option('o', { alias: 'outputDir', description: 'Directorio donde se guardarán los PDFs', type: 'string', default: './revistas_generadas', normalize: true })
+        .option('t', { alias: 'titlePrefix', description: 'Prefijo para el título de cada revista PDF', type: 'string', default: 'Buscadis Clasificados' })
+        .help('h').alias('h', 'help').strict()
+        .fail((msg, err, yargs) => { console.error("Error:", msg); console.error("\n", yargs.help()); process.exit(1); })
+        .parse();
 
-    // Acceder al argumento posicional por su nombre
-    const inputDirectory = argv.inputDir; // Ya está normalizado por yargs
-    const outputFilePath = argv.output; // Ya está normalizado por yargs
-    const magazineTitle = argv.title;
+    const inputDirectory = argv.inputDir;
+    const outputDirectory = argv.outputDir;
+    const titlePrefix = argv.titlePrefix;
 
     let allPublications = [];
     let jsonFilesToProcess = [];
+    let filesWithError = [];
 
     console.log(`Buscando archivos JSON en: ${inputDirectory}`);
     try {
+        await fs.mkdir(outputDirectory, { recursive: true }); // Crear directorio de salida
         const directoryEntries = await fs.readdir(inputDirectory, { withFileTypes: true });
         jsonFilesToProcess = directoryEntries
             .filter(dirent => dirent.isFile() && path.extname(dirent.name).toLowerCase() === '.json')
             .map(dirent => path.join(inputDirectory, dirent.name))
-            .sort((a, b) => { // Ordenamiento numérico
-                 const numA = parseInt(path.basename(a).match(/(\d+)/)?.[1] || 0);
-                 const numB = parseInt(path.basename(b).match(/(\d+)/)?.[1] || 0);
-                 return numA - numB;
+            .sort((a, b) => { /* ... ordenamiento numérico ... */
+                const numA = parseInt(path.basename(a).match(/(\d+)/)?.[1] || 0);
+                const numB = parseInt(path.basename(b).match(/(\d+)/)?.[1] || 0);
+                return numA - numB;
              });
-        if (jsonFilesToProcess.length === 0) {
-            console.error(`Error: No se encontraron archivos .json en ${inputDirectory}`);
-            return;
-        }
+        if (jsonFilesToProcess.length === 0) throw new Error(`No se encontraron archivos .json en ${inputDirectory}`);
         console.log(`Se encontraron ${jsonFilesToProcess.length} archivos JSON.`);
     } catch (error) {
-        if (error.code === 'ENOENT') {
-            console.error(`Error: El directorio no existe o no es accesible: ${inputDirectory}`);
-        } else {
-            console.error(`Error al leer directorio ${inputDirectory}:`, error);
-        }
+        if (error.code === 'ENOENT') { console.error(`Error: El directorio no existe o no es accesible: ${inputDirectory}`); }
+        else { console.error(`Error al leer directorio ${inputDirectory}:`, error); }
         return;
     }
 
-    console.log("Cargando y procesando publicaciones...");
-    for (const jsonFilePath of jsonFilesToProcess) {
-        const pubsData = await loadJsonData(jsonFilePath);
-        if (pubsData) {
-            allPublications = allPublications.concat(pubsData);
-        } else {
-             console.warn(`! Se omitieron datos del archivo ${path.basename(jsonFilePath)} por errores.`);
+    console.log("\n--- Cargando Publicaciones ---");
+    for (const [index, jsonFilePath] of jsonFilesToProcess.entries()) {
+        const fileName = path.basename(jsonFilePath);
+        console.log(`[${index + 1}/${jsonFilesToProcess.length}] Procesando: ${fileName}...`);
+        try {
+            const pubsData = await loadJsonData(jsonFilePath);
+            if (pubsData) {
+                allPublications = allPublications.concat(pubsData);
+                console.log(`   -> OK (${pubsData.length} pubs)`);
+            } else {
+                 console.warn(`   ! WARN: ${fileName} sin datos válidos o error al cargar.`);
+                 filesWithError.push(fileName);
+            }
+        } catch (loadError) {
+             console.error(`   !! FATAL ERROR cargando ${fileName}: ${loadError.message}`);
+             filesWithError.push(fileName);
+             // Considerar salir si la carga es crítica: // process.exit(1);
         }
     }
-    if (allPublications.length === 0) {
-      console.log("No se cargaron datos válidos. Abortando.");
-      return;
+
+    if (allPublications.length === 0) { console.log("\nNo se cargaron publicaciones válidas. Abortando."); return; }
+    console.log(`\n--- Carga Finalizada ---`);
+    console.log(`Total de publicaciones válidas cargadas: ${allPublications.length}`);
+    if (filesWithError.length > 0) console.warn(`Archivos con errores o sin datos: ${filesWithError.join(', ')}`);
+
+    const groupedData = groupPubsByCategory(allPublications);
+
+    console.log("\n--- Iniciando Generación de PDFs por Categoría ---");
+    let successCount = 0;
+    let errorCount = 0;
+    const totalCategories = Object.keys(groupedData).length;
+    const categoryColors = { // Paleta de colores por categoría (Ejemplo)
+        'Inmuebles': { primary: '#2a9d8f', accent: '#264653' },
+        'Vehículos': { primary: '#e76f51', accent: '#f4a261' },
+        'Empleos':   { primary: '#0077b6', accent: '#00b4d8' },
+        'Servicios': { primary: '#8e44ad', accent: '#9b59b6' },
+        'Productos': { primary: '#34495e', accent: '#2c3e50' },
+        'Mascotas':  { primary: '#e07a5f', accent: '#f2cc8f' },
+        'Comunidad': { primary: '#577590', accent: '#43aa8b' },
+        'Negocios':  { primary: '#4d908e', accent: '#f9c74f' },
+        'default':   { primary: '#004a8f', accent: '#007bff' }
+    };
+
+    for (const [categoryName, pubsInCategory] of Object.entries(groupedData)) {
+        const categoryIndex = successCount + errorCount + 1;
+        console.log(`\n[${categoryIndex}/${totalCategories}] Procesando categoría: ${categoryName} (${pubsInCategory.length} pubs)`);
+        const categoryTitle = `${titlePrefix} - ${categoryName}`;
+        const safeCategoryName = categoryName.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/_+$/, '');
+        const categoryOutputFilename = path.join(outputDirectory, `revista_${safeCategoryName}.pdf`);
+        const styleOverrides = categoryColors[categoryName] || categoryColors['default'];
+
+        console.log(`   Generando HTML para ${categoryName}...`);
+        const categoryHtml = generateMagazineHtml({ [categoryName]: pubsInCategory }, categoryTitle, styleOverrides);
+
+        // Guardar HTML para debug (opcional)
+        // const htmlDebugPath = categoryOutputFilename.replace(/\.pdf$/i, '_debug.html');
+        // await fs.writeFile(htmlDebugPath, categoryHtml, 'utf-8');
+        // console.log(`   HTML guardado para debug en: ${path.basename(htmlDebugPath)}`);
+
+        const success = await savePdf(categoryHtml, categoryOutputFilename);
+        if (success) { successCount++; } else { errorCount++; }
     }
-    console.log(`Total de publicaciones cargadas: ${allPublications.length}`);
 
-    const groupedPubs = groupPubsByCategory(allPublications);
-    const htmlOutput = generateMagazineHtml(groupedPubs, magazineTitle);
-
-    // Guardar HTML para debug (opcional)
-    // const htmlDebugPath = outputFilePath.replace(/\.pdf$/i, '_debug.html');
-    // await fs.writeFile(htmlDebugPath, htmlOutput, 'utf-8');
-    // console.log(`HTML guardado en: ${htmlDebugPath}`);
-
-    const success = await savePdf(htmlOutput, outputFilePath);
-    if (success) { console.log(`\nProceso finalizado. Revista generada en: ${outputFilePath}`); }
-    else { console.error("\nFallo al generar PDF."); }
+    // Resumen final
+    console.log("\n--- Resumen de Generación ---");
+    console.log(` Directorio de Salida: ${outputDirectory}`);
+    console.log(` PDFs Generados con Éxito: ${successCount}`);
+    if (errorCount > 0) console.error(` PDFs con Errores: ${errorCount}`);
+    console.log("----------------------------");
 }
 
 // Ejecutar script
 main().catch(error => {
-  console.error("Error fatal:", error);
+  console.error("!! Error fatal:", error);
   process.exit(1);
 });
