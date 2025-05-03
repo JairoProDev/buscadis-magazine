@@ -1,0 +1,190 @@
+[
+    {
+      "title": "Alquilo Departamento 3 Dormitorios Amoblado - Urb. Larapa",
+      "description": "Alquilo amplio departamento totalmente amoblado en 3er piso. Consta de 3 dormitorios, sala, comedor, cocina equipada, 2 baños (uno con jacuzzi), lavandería, cochera (opcional). Incluye terma a gas.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "district": "San Jerónimo",
+        "address": "Urb. Larapa Grande A-10"
+      },
+      "contact": {
+        "phones": ["974219009"]
+      },
+      "attributes": {
+        "dormitorios": 3,
+        "banos": 2,
+        "piso": 3,
+        "amoblado": "si",
+        "ambientes": ["sala", "comedor", "cocina_equipada", "lavanderia"],
+        "caracteristicas_adicionales": ["jacuzzi", "terma_gas"],
+        "cocheras": 1,
+        "cochera_opcional": true
+      }
+    },
+    {
+      "title": "Alquilo Habitación Amoblada Independiente - Huancaro",
+      "description": "Se alquila habitación amplia, amoblada, con baño privado, agua caliente e internet. Ubicada en Av. Infancia, zona segura, cerca a Real Plaza y terminal.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "habitaciones",
+      "subSubcategorySlug": "simple-personal",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Av. Infancia",
+        "referencePoint": "Zona Huancaro, cerca Real Plaza y Terminal Terrestre"
+      },
+      "contact": {
+        "phones": ["974219009"]
+      },
+      "attributes": {
+        "amoblado": "si",
+        "bano_privado": true,
+        "entrada_independiente": true,
+        "servicios_incluidos": ["agua_caliente", "internet"],
+        "ubicacion_segura": true
+      }
+    },
+    {
+      "title": "Vendo Departamento 3 Dormitorios 118m² - Urb. Progreso",
+      "description": "Vendo departamento amplio de 118m² en Urb. Progreso, 3er piso. Consta de 3 dormitorios (principal con baño), sala-comedor, cocina, lavandería, baño de visitas. Acabados de primera. Papeles en regla. Precio $120,000 USD.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "amount": 120000,
+      "currency": "USD",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Urb. Progreso"
+      },
+      "contact": {
+        "phones": ["974219009"]
+      },
+      "attributes": {
+        "area_m2": 118,
+        "dormitorios": 3,
+        "banos": 2.5,
+        "piso": 3,
+        "ambientes": ["sala_comedor", "cocina", "lavanderia", "dormitorio_principal_con_bano"],
+        "acabados": "primera",
+        "documentacion_regla": true
+      }
+    },
+    {
+      "title": "Alquiler Habitaciones Estreno con Baño Privado - Urb. Ttio",
+      "description": "Se alquilan habitaciones de estreno, amplias y cómodas, con baño privado, agua caliente 24h, Wi-Fi. Ubicadas en 3er y 4to piso. Ideal para personas solas o parejas.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "habitaciones",
+      "subSubcategorySlug": "doble-matrimonial",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Urb. Ttio Q-17",
+        "referencePoint": "Entre Av. Velasco Astete y Tomasa Tito"
+      },
+      "contact": {
+        "phones": ["950774510"]
+      },
+      "attributes": {
+        "condicion": "estreno",
+        "bano_privado": true,
+        "servicios_incluidos": ["agua_caliente_24h", "wifi"],
+        "piso": "3 y 4",
+        "publico_objetivo": "personas_solas_o_parejas"
+      }
+    },
+    {
+      "title": "Alquilo Departamento Dúplex Amoblado 3 Dormitorios - Marcavalle",
+      "description": "Se alquila departamento dúplex totalmente amoblado en 5to piso. Cuenta con 3 dormitorios, 3 baños, sala, comedor, cocina, estudio, lavandería, terraza. Acabados de primera.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "duplex",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Zona Marcavalle"
+      },
+      "contact": {
+        "phones": ["946680209"]
+      },
+      "attributes": {
+        "dormitorios": 3,
+        "banos": 3,
+        "piso": 5,
+        "amoblado": "si",
+        "ambientes": ["sala", "comedor", "cocina", "estudio", "lavanderia", "terraza"],
+        "acabados": "primera"
+      }
+    },
+    {
+      "title": "Alquilo Habitación Amoblada con Baño Privado - Urb. Progreso",
+      "description": "Alquilo habitación amoblada para señorita o persona sola. Cuenta con baño privado, agua caliente, Wi-Fi, TV cable. Ubicado en Urb. Progreso.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "habitaciones",
+      "subSubcategorySlug": "simple-personal",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Urb. Progreso"
+      },
+      "contact": {
+        "phones": ["984172313"]
+      },
+      "attributes": {
+        "amoblado": "si",
+        "bano_privado": true,
+        "servicios_incluidos": ["agua_caliente", "wifi", "tv_cable"],
+        "publico_objetivo": "señorita_o_persona_sola"
+      }
+    },
+    {
+      "title": "Alquilo Tienda Comercial Excelente Ubicación - Av. Garcilaso",
+      "description": "Se alquila tienda comercial en excelente ubicación, con alto tránsito peatonal y vehicular. Ideal para diferentes rubros.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "locales-comerciales",
+      "subSubcategorySlug": "tienda-puerta-calle",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Av. Garcilaso 1era Cuadra"
+      },
+      "contact": {
+        "phones": ["984172313"]
+      },
+      "attributes": {
+        "ubicacion_estrategica": true,
+        "alto_transito": true
+      }
+    },
+    {
+      "title": "Alquilo Terreno 600m² Cercado - Asociación Buena Vista",
+      "description": "Se alquila terreno de 600m² totalmente cercado. Ideal para depósito o taller.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "terrenos-lotes",
+      "subSubcategorySlug": "terreno-comercial",
+      "location": {
+        "province": "Cusco",
+        "district": "San Sebastián",
+        "address": "Asociación Buena Vista"
+      },
+      "contact": {
+        "phones": ["984172313"]
+      },
+      "attributes": {
+        "area_m2": 600,
+        "cercado": true,
+        "usos_potenciales": ["deposito", "taller"]
+      }
+    }
+  ]

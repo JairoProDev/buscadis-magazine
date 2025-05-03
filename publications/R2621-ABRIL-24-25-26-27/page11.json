@@ -1,0 +1,223 @@
+[
+    {
+      "title": "Alquilo Departamento 3 Dormitorios + Cochera - Magisterio",
+      "description": "Se alquila departamento en 1ra Etapa de Magisterio, 4to piso. Consta de 3 dormitorios, sala-comedor, cocina, 2 baños, lavandería. Incluye cochera.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "district": "Cusco",
+        "address": "Urb. Magisterio, 1ra Etapa"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "piso": 4,
+        "dormitorios": 3,
+        "banos": 2,
+        "ambientes": ["sala_comedor", "cocina", "lavanderia"],
+        "cocheras": 1
+      }
+    },
+    {
+      "title": "Alquilo Casa 4 Dormitorios - Urb. Marcavalle",
+      "description": "Se alquila casa amplia en Urb. Marcavalle. Consta de 4 dormitorios, sala, comedor, cocina, estudio, 3 baños, patio, jardín y cochera.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "casas",
+      "subSubcategorySlug": "casa-urbana",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Urb. Marcavalle"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "dormitorios": 4,
+        "banos": 3,
+        "ambientes": ["sala", "comedor", "cocina", "estudio", "patio", "jardin"],
+        "cocheras": 1
+      }
+    },
+    {
+      "title": "Alquilo Departamento 3 Dormitorios Céntrico - Av. Pardo",
+      "description": "Alquilo departamento en plena Av. Pardo. Consta de 3 dormitorios, sala-comedor, cocina, 2 baños, lavandería.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "district": "Cusco",
+        "address": "Av. Pardo"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "dormitorios": 3,
+        "banos": 2,
+        "ambientes": ["sala_comedor", "cocina", "lavanderia"],
+        "ubicacion_centrica": true
+      }
+    },
+    {
+      "title": "Alquilo Local Comercial Amplio - Av. La Cultura",
+      "description": "Se alquila local comercial amplio en Av. La Cultura, 1er piso. Ideal para farmacia, minimarket, etc.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "locales-comerciales",
+      "subSubcategorySlug": "tienda-puerta-calle",
+      "location": {
+        "province": "Cusco",
+        "address": "Av. La Cultura"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "piso": 1,
+        "amplitud": "amplio",
+        "usos_potenciales": ["farmacia", "minimarket"]
+      }
+    },
+    {
+      "title": "Ocasión: Vendo Auto Toyota Yaris 2015 Full Equipo",
+      "description": "Vendo auto Toyota Yaris del 2015, versión full equipo, mecánico. Uso particular, único dueño. Documentos en regla.",
+      "images": [],
+      "categorySlug": "vehiculos",
+      "subcategorySlug": "autos",
+      "subSubcategorySlug": "sedan",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "marca": "Toyota",
+        "modelo": "Yaris",
+        "ano": 2015,
+        "condicion": "usado",
+        "equipamiento": "full_equipo",
+        "transmision": "mecanico",
+        "uso": "particular",
+        "unico_dueno": true,
+        "documentacion_regla": true
+      }
+    },
+    {
+      "title": "Vendo Camioneta Suzuki Grand Nomade 2010 4x4",
+      "description": "Vendo camioneta Suzuki Grand Nomade año 2010, 4x4, mecánica, full equipo. En buen estado.",
+      "images": [],
+      "categorySlug": "vehiculos",
+      "subcategorySlug": "camionetas-suv-vans",
+      "subSubcategorySlug": "suv",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "marca": "Suzuki",
+        "modelo": "Grand Nomade",
+        "ano": 2010,
+        "condicion": "usado",
+        "traccion": "4x4",
+        "transmision": "mecanico",
+        "equipamiento": "full_equipo",
+        "estado": "bueno"
+      }
+    },
+    {
+      "title": "Alquilo Habitaciones Amobladas Baño Privado - Av. Huayruropata",
+      "description": "Alquilo habitaciones amobladas con baño privado en Av. Huayruropata. Incluyen agua caliente e internet.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "habitaciones",
+      "subSubcategorySlug": "simple-personal",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Av. Huayruropata"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "amoblado": "si",
+        "bano_privado": true,
+        "servicios_incluidos": ["agua_caliente", "internet"]
+      }
+    },
+    {
+      "title": "Vendo Auto Nissan Sentra 2012",
+      "description": "Vendo auto Nissan Sentra V16 del año 2012. En buen estado.",
+      "images": [],
+      "categorySlug": "vehiculos",
+      "subcategorySlug": "autos",
+      "subSubcategorySlug": "sedan",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "marca": "Nissan",
+        "modelo": "Sentra V16",
+        "ano": 2012,
+        "condicion": "usado",
+        "estado": "bueno"
+      }
+    },
+    {
+      "title": "Vendo Camión Hyundai HD78 5 Toneladas - 2013",
+      "description": "Vendo camión marca Hyundai, modelo HD78, capacidad 5 toneladas, año 2013. Documentos en regla.",
+      "images": [],
+      "categorySlug": "vehiculos",
+      "subcategorySlug": "camiones-buses",
+      "subSubcategorySlug": "camion-ligero-mediano",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "marca": "Hyundai",
+        "modelo": "HD78",
+        "capacidad_toneladas": 5,
+        "ano": 2013,
+        "condicion": "usado",
+        "documentacion_regla": true
+      }
+    },
+    {
+      "title": "Vendo Moto Pulsar NS 200 - 2018",
+      "description": "Vendo moto Pulsar NS 200, año 2018. En perfecto estado.",
+      "images": [],
+      "categorySlug": "vehiculos",
+      "subcategorySlug": "motos-mototaxis-similares",
+      "subSubcategorySlug": "moto-lineal-pistera",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "marca": "Pulsar",
+        "modelo": "NS 200",
+        "ano": 2018,
+        "condicion": "usado",
+        "estado": "perfecto"
+      }
+    }
+  ]

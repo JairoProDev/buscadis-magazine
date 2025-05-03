@@ -1,0 +1,173 @@
+[
+    {
+      "title": "Vendo Ropa Americana Nueva por Fardo",
+      "description": "Vendo ropa americana nueva por fardo. Excelente calidad y precios por mayor.",
+      "images": [],
+      "categorySlug": "productos",
+      "subcategorySlug": "ropa-calzado-accesorios",
+      "subSubcategorySlug": "ropa-mujer",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "condicion": "nuevo",
+        "origen": "americana",
+        "formato_venta": "fardo",
+        "calidad": "excelente"
+      }
+    },
+    {
+      "title": "Servicio Técnico de Lavadoras y Refrigeradoras",
+      "description": "Servicio técnico especializado en reparación y mantenimiento de lavadoras y refrigeradoras. Todas las marcas.",
+      "images": [],
+      "categorySlug": "servicios",
+      "subcategorySlug": "reparaciones-mantenimiento-tecnicos",
+      "subSubcategorySlug": "reparacion-electrodomesticos",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "servicios_ofrecidos": ["reparacion", "mantenimiento"],
+        "equipos_soportados": ["lavadoras", "refrigeradoras"],
+        "marcas_soportadas": "todas"
+      }
+    },
+    {
+      "title": "Préstamos de Dinero al Instante con Garantía Vehicular",
+      "description": "Ofrecemos préstamos de dinero al instante dejando tu vehículo en garantía. Trámite rápido y seguro.",
+      "images": [],
+      "categorySlug": "servicios",
+      "subcategorySlug": "servicios-financieros-seguros",
+      "subSubcategorySlug": "prestamos-creditos",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "tipo_garantia": "vehicular",
+        "rapidez_tramite": "inmediato"
+      }
+    },
+    {
+      "title": "Venta e Instalación de Cámaras de Seguridad",
+      "description": "Ofrecemos venta e instalación de sistemas de cámaras de seguridad (CCTV) para hogar y negocio. Monitoreo remoto.",
+      "images": [],
+      "categorySlug": "servicios",
+      "subcategorySlug": "reparaciones-mantenimiento-tecnicos",
+      "subSubcategorySlug": "instalacion-sistemas-seguridad",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "servicios_ofrecidos": ["venta", "instalacion"],
+        "tipo_sistema": "camaras_seguridad_cctv",
+        "aplicacion": ["hogar", "negocio"],
+        "caracteristicas_adicionales": ["monitoreo_remoto"]
+      }
+    },
+    {
+      "title": "Carpintería Metálica: Puertas, Ventanas, Rejas",
+      "description": "Fabricación e instalación de puertas, ventanas, rejas, escaleras y estructuras metálicas en general. Trabajos a medida.",
+      "images": [],
+      "categorySlug": "servicios",
+      "subcategorySlug": "reparaciones-mantenimiento-tecnicos",
+      "subSubcategorySlug": "metalmecanica-soldadura",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "productos_fabricados": ["puertas_metalicas", "ventanas_metalicas", "rejas", "escaleras_metalicas", "estructuras_metalicas"],
+        "servicio_personalizado": true
+      }
+    },
+    {
+      "title": "Servicio de Catering para Eventos",
+      "description": "Ofrecemos servicio completo de catering para todo tipo de eventos: matrimonios, cumpleaños, eventos corporativos. Buffet, bocaditos, menaje.",
+      "images": [],
+      "categorySlug": "servicios",
+      "subcategorySlug": "servicios-eventos-catering",
+      "subSubcategorySlug": "catering-buffet-bocaditos",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "tipo_evento": ["matrimonios", "cumpleanos", "eventos_corporativos"],
+        "servicios_ofrecidos": ["buffet", "bocaditos", "menaje"]
+      }
+    },
+    {
+      "title": "Psicólogo Colegiado: Terapia Individual y de Pareja",
+      "description": "Atención psicológica profesional por psicólogo colegiado. Terapia individual, terapia de pareja, manejo de ansiedad y estrés.",
+      "images": [],
+      "categorySlug": "servicios",
+      "subcategorySlug": "salud-bienestar",
+      "subSubcategorySlug": "psicologia-psicoterapia",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "profesional_colegiado": true,
+        "tipo_terapia": ["individual", "pareja"],
+        "problemas_tratados": ["ansiedad", "estres"]
+      }
+    },
+    {
+      "title": "Vendo Cachorros Bulldog Francés con Pedigree",
+      "description": "Vendo hermosos cachorros Bulldog Francés, con pedigree, vacunados y desparasitados.",
+      "images": [],
+      "categorySlug": "productos",
+      "subcategorySlug": "mascotas-productos-animales",
+      "subSubcategorySlug": "perros-cachorros-venta",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "tipo_animal": "perro",
+        "raza": "Bulldog Francés",
+        "edad": "cachorro",
+        "pedigree": true,
+        "vacunado": true,
+        "desparasitado": true
+      }
+    },
+    {
+      "title": "Alquiler de Sonido Profesional para Eventos",
+      "description": "Alquilamos equipos de sonido profesional, luces y DJ para todo tipo de eventos. Garantizamos calidad y potencia.",
+      "images": [],
+      "categorySlug": "servicios",
+      "subcategorySlug": "servicios-eventos-catering",
+      "subSubcategorySlug": "alquiler-equipos-sonido-luces-dj",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "equipos_alquiler": ["sonido_profesional", "luces", "dj"]
+      }
+    }
+  ]

@@ -1,0 +1,224 @@
+[
+    {
+      "title": "Vendo Terreno 130m² - APV Los Balcones de Versalles, San Jerónimo",
+      "description": "Vendo terreno de 130m² en San Jerónimo, APV Los Balcones de Versalles. Cuenta con documentos y servicios básicos. Listo para construir.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "terrenos-lotes",
+      "subSubcategorySlug": "terreno-urbano-residencial",
+      "location": {
+        "province": "Cusco",
+        "district": "San Jerónimo",
+        "address": "APV Los Balcones de Versalles"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "area_m2": 130,
+        "servicios_basicos": true,
+        "documentacion_regla": true,
+        "listo_para_construir": true
+      }
+    },
+    {
+      "title": "Alquilo Mini Departamento Estreno - Urb. Ucchullo Grande",
+      "description": "Alquilo mini departamento de estreno en 2do piso. Consta de 1 dormitorio, cocina-lavandería y baño. Ideal para persona sola o pareja.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estudio-loft",
+      "location": {
+        "province": "Cusco",
+        "district": "Santiago",
+        "address": "Urb. Ucchullo Grande"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "condicion": "estreno",
+        "piso": 2,
+        "dormitorios": 1,
+        "banos": 1,
+        "ambientes": ["cocina_lavanderia"],
+        "publico_objetivo": "persona_sola_o_pareja"
+      }
+    },
+    {
+      "title": "Alquilo Departamento 2 Dormitorios Amplios - Av. Infancia",
+      "description": "Se alquila departamento en Av. Infancia. Consta de 2 dormitorios amplios, sala-comedor, cocina, baño, lavandería. Bien iluminado.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Av. Infancia"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "dormitorios": 2,
+        "banos": 1,
+        "ambientes": ["sala_comedor", "cocina", "lavanderia"],
+        "caracteristicas_adicionales": ["amplio", "bien_iluminado"]
+      }
+    },
+    {
+      "title": "Alquilo Oficina Céntrica 80m² - Calle Ayacucho",
+      "description": "Alquilo oficina de 80m² en Calle Ayacucho, pleno centro de Cusco. Ideal para diversos usos profesionales.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "oficinas",
+      "subSubcategorySlug": "oficina-administrativa",
+      "location": {
+        "province": "Cusco",
+        "district": "Cusco",
+        "address": "Calle Ayacucho"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "area_m2": 80,
+        "ubicacion_centrica": true
+      }
+    },
+    {
+      "title": "Traspaso Restaurante Equipado - Santa Úrsula",
+      "description": "Traspaso restaurante totalmente equipado y listo para funcionar. Con licencia de funcionamiento. Ubicado en zona Santa Úrsula.",
+      "images": [],
+      "categorySlug": "negocios",
+      "subcategorySlug": "venta-traspaso-negocios",
+      "subSubcategorySlug": "restaurante-bar-cafeteria",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Zona Santa Úrsula"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "equipado": true,
+        "listo_para_funcionar": true,
+        "licencia_funcionamiento": true
+      }
+    },
+    {
+      "title": "Vendo Casa 2 Departamentos Independientes - Ticatica",
+      "description": "Ocasión: Vendo casa de 3 pisos con 2 departamentos independientes más aires, azotea y patio. Ideal para inversión o familia grande. Ubicada en Ticatica.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "casas",
+      "subSubcategorySlug": "casa-urbana",
+      "location": {
+        "province": "Cusco",
+        "district": "Cusco",
+        "address": "Ticatica"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "pisos": 3,
+        "departamentos_independientes": 2,
+        "incluye_aires": true,
+        "ambientes_adicionales": ["azotea", "patio"]
+      }
+    },
+    {
+      "title": "Alquilo Departamento Estreno 3 Dormitorios + Cochera - San Sebastián",
+      "description": "Alquilo departamento de estreno en 4to piso, con ascensor. Consta de 3 dormitorios, 2 baños, sala-comedor, cocina con reposteros, lavandería. Incluye cochera.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "district": "San Sebastián",
+        "address": "Urb. Ernesto Gunther"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "condicion": "estreno",
+        "piso": 4,
+        "ascensor": true,
+        "dormitorios": 3,
+        "banos": 2,
+        "ambientes": ["sala_comedor", "cocina", "lavanderia"],
+        "caracteristicas_adicionales": ["cocina_reposteros"],
+        "cocheras": 1
+      }
+    },
+    {
+      "title": "Alquilo Departamento Amoblado 2 Dormitorios - Residencial Huancaro",
+      "description": "Se alquila departamento amoblado en 5to piso, Residencial Huancaro. Consta de 2 dormitorios, sala-comedor, cocina, lavandería, baño. Cuenta con ascensor y vigilancia.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "district": "Santiago",
+        "address": "Residencial Huancaro"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "amoblado": "si",
+        "piso": 5,
+        "dormitorios": 2,
+        "banos": 1,
+        "ambientes": ["sala_comedor", "cocina", "lavanderia"],
+        "ascensor": true,
+        "vigilancia": true
+      }
+    },
+    {
+      "title": "Alquilo Local Comercial 30m² - Av. Los Incas",
+      "description": "Se alquila local comercial de 30m² en plena Av. Los Incas, cerca al mercado.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "locales-comerciales",
+      "subSubcategorySlug": "tienda-puerta-calle",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Av. Los Incas",
+        "referencePoint": "Cerca al mercado"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "area_m2": 30
+      }
+    },
+    {
+      "title": "Vendo Terreno 132m² - Urb. Santa María, San Sebastián",
+      "description": "Vendo terreno de 132m² con papeles en regla. Ubicado en Urb. Santa María, San Sebastián.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "terrenos-lotes",
+      "subSubcategorySlug": "terreno-urbano-residencial",
+      "location": {
+        "province": "Cusco",
+        "district": "San Sebastián",
+        "address": "Urb. Santa María"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "area_m2": 132,
+        "documentacion_regla": true
+      }
+    }
+  ]

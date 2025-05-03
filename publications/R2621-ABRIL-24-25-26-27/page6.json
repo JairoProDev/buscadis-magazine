@@ -1,0 +1,273 @@
+[
+    {
+      "title": "Alquilo Mini Departamento Ideal para Pareja o Persona Sola - Santa Rosa",
+      "description": "Se alquila mini departamento en 3er piso. Consta de 1 dormitorio, sala-cocina y baño privado. Ideal para pareja o persona sola. Razón Cel. 984709328.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estudio-loft",
+      "location": {
+        "province": "Cusco",
+        "district": "San Sebastián",
+        "address": "Urb. Santa Rosa"
+      },
+      "contact": {
+        "phones": ["984709328"]
+      },
+      "attributes": {
+        "piso": 3,
+        "dormitorios": 1,
+        "banos": 1,
+        "ambientes": ["sala_cocina"],
+        "bano_privado": true,
+        "publico_objetivo": "pareja_o_persona_sola"
+      }
+    },
+    {
+      "title": "Anticresis Departamento 3 Dormitorios - Urb. Cachimayo",
+      "description": "Doy en anticresis amplio departamento en 1er piso, ubicado en la Urb. Cachimayo (San Sebastián). Consta de 3 dormitorios, sala-comedor, cocina, baño, lavandería y patio. Entrada independiente.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "district": "San Sebastián",
+        "address": "Urb. Cachimayo"
+      },
+      "contact": {
+        "phones": ["958189663"]
+      },
+      "attributes": {
+        "tipo_contrato": "anticresis",
+        "piso": 1,
+        "dormitorios": 3,
+        "banos": 1,
+        "ambientes": ["sala_comedor", "cocina", "lavanderia", "patio"],
+        "entrada_independiente": true
+      }
+    },
+    {
+      "title": "Alquilo Departamento 2 Dormitorios - San Blas",
+      "description": "Se alquila departamento en el tradicional barrio de San Blas. Consta de 2 dormitorios, sala, comedor, cocina y baño.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "district": "Cusco",
+        "address": "San Blas"
+      },
+      "contact": {
+        "phones": ["984172313"]
+      },
+      "attributes": {
+        "dormitorios": 2,
+        "banos": 1,
+        "ambientes": ["sala", "comedor", "cocina"]
+      }
+    },
+    {
+      "title": "Alquilo Mini Departamento Interior - Marcavalle",
+      "description": "Alquilo mini departamento interior en 2do piso. Consta de 1 dormitorio, cocina-comedor y baño. Ideal para persona sola o pareja que trabajen.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estudio-loft",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Marcavalle, Jr. Mateo Pumacahua"
+      },
+      "contact": {
+        "phones": ["984172313"]
+      },
+      "attributes": {
+        "piso": 2,
+        "dormitorios": 1,
+        "banos": 1,
+        "ambientes": ["cocina_comedor"],
+        "ubicacion_interna": true,
+        "publico_objetivo": "persona_sola_o_pareja_trabajadora"
+      }
+    },
+    {
+      "title": "Vendo Lote 150m² con Servicios - Urb. Daniel Estrada, San Jerónimo",
+      "description": "Por ocasión, vendo lote de 150m² en la Urb. Daniel Estrada (San Jerónimo). Cuenta con todos los servicios básicos y documentos en regla. Precio $37,000 USD.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "terrenos-lotes",
+      "subSubcategorySlug": "terreno-urbano-residencial",
+      "amount": 37000,
+      "currency": "USD",
+      "location": {
+        "province": "Cusco",
+        "district": "San Jerónimo",
+        "address": "Urb. Daniel Estrada"
+      },
+      "contact": {
+        "phones": ["998542011"]
+      },
+      "attributes": {
+        "area_m2": 150,
+        "servicios_basicos": true,
+        "documentacion_regla": true
+      }
+    },
+    {
+      "title": "Alquilo Departamento 2 Dormitorios - Urb. Los Licenciados, San Sebastián",
+      "description": "Alquilo departamento en 3er piso. Consta de 2 dormitorios con roperos empotrados, sala-comedor, cocina con reposteros, baño con ducha eléctrica, lavandería. Medidor de luz independiente. Para persona sola o pareja.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "district": "San Sebastián",
+        "address": "Urb. Los Licenciados"
+      },
+      "contact": {
+        "phones": ["993511178", "984032841"]
+      },
+      "attributes": {
+        "piso": 3,
+        "dormitorios": 2,
+        "banos": 1,
+        "ambientes": ["sala_comedor", "cocina", "lavanderia"],
+        "caracteristicas_adicionales": ["roperos_empotrados", "cocina_reposteros", "ducha_electrica", "medidor_luz_independiente"],
+        "publico_objetivo": "persona_sola_o_pareja"
+      }
+    },
+    {
+      "title": "Vendo Terreno 300m² Cercado - San Sebastián, Cerca a Colegio",
+      "description": "Vendo terreno cercado de 300m², con luz y papeles al día. Ubicado en 5to paradero de San Sebastián, Asociación Los Jardines, a dos cuadras del colegio.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "terrenos-lotes",
+      "subSubcategorySlug": "terreno-urbano-residencial",
+      "location": {
+        "province": "Cusco",
+        "district": "San Sebastián",
+        "address": "Asociación Los Jardines",
+        "referencePoint": "5to paradero, a dos cuadras del colegio"
+      },
+      "contact": {
+        "phones": ["974700087"]
+      },
+      "attributes": {
+        "area_m2": 300,
+        "cercado": true,
+        "servicios_basicos": ["luz"],
+        "documentacion_regla": true
+      }
+    },
+    {
+      "title": "Alquilo Habitaciones con Baño Privado y Servicios - San Sebastián",
+      "description": "Se alquilan habitaciones con baño privado, agua caliente y Wi-Fi. Ideal para estudiante o persona sola. Ubicadas en 4to paradero de San Sebastián.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "habitaciones",
+      "subSubcategorySlug": "simple-personal",
+      "location": {
+        "province": "Cusco",
+        "district": "San Sebastián",
+        "referencePoint": "4to paradero de San Sebastián"
+      },
+      "contact": {
+        "phones": ["984481760"]
+      },
+      "attributes": {
+        "bano_privado": true,
+        "servicios_incluidos": ["agua_caliente", "wifi"],
+        "publico_objetivo": "estudiante_o_persona_sola"
+      }
+    },
+    {
+      "title": "Vendo Lote Esquina 180m² - San Jerónimo",
+      "description": "Vendo lote en esquina de 180m², con proyección para 5 pisos. Ubicado a una cuadra de la vía principal de San Jerónimo.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "terrenos-lotes",
+      "subSubcategorySlug": "terreno-urbano-residencial",
+      "location": {
+        "province": "Cusco",
+        "district": "San Jerónimo",
+        "referencePoint": "A una cuadra de la vía principal"
+      },
+      "contact": {
+        "phones": ["984172313"]
+      },
+      "attributes": {
+        "area_m2": 180,
+        "ubicacion_esquina": true,
+        "proyeccion_pisos": 5
+      }
+    },
+    {
+      "title": "Alquilo Departamento 2 Dormitorios Amoblado - Urb. Santa Mónica",
+      "description": "Alquilo departamento amoblado para persona sola, pareja o familia corta. Consta de 2 dormitorios, sala-comedor, cocina, baño, lavandería. Incluye agua caliente, internet, TV cable.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Urb. Santa Mónica"
+      },
+      "contact": {
+        "phones": ["984172313"]
+      },
+      "attributes": {
+        "dormitorios": 2,
+        "banos": 1,
+        "amoblado": "si",
+        "ambientes": ["sala_comedor", "cocina", "lavanderia"],
+        "servicios_incluidos": ["agua_caliente", "internet", "tv_cable"],
+        "publico_objetivo": "persona_sola_pareja_familia_corta"
+      }
+    },
+    {
+      "title": "Alquilo Departamento Dúplex 4 Dormitorios Amoblado - Manuel Prado",
+      "description": "Alquilo departamento dúplex amoblado de 160m². Consta de 4 dormitorios, sala-comedor, cocina equipada, 3 baños, lavandería, cuarto de servicio. Acabados de primera. Ubicado cerca a la Av. Manuel Prado.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "duplex",
+      "location": {
+        "province": "Cusco",
+        "referencePoint": "Cerca a la Av. Manuel Prado"
+      },
+      "contact": {
+        "phones": ["984172313"]
+      },
+      "attributes": {
+        "area_m2": 160,
+        "dormitorios": 4,
+        "banos": 3,
+        "amoblado": "si",
+        "ambientes": ["sala_comedor", "cocina_equipada", "lavanderia", "cuarto_servicio"],
+        "acabados": "primera"
+      }
+    },
+    {
+      "title": "Alquilo Oficina Amplia y Céntrica - Centro Comercial Ollanta",
+      "description": "Se alquila oficina amplia en 3er piso del Centro Comercial Ollanta. Ideal para diversos usos profesionales o administrativos.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "oficinas",
+      "subSubcategorySlug": "oficina-administrativa",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Centro Comercial Ollanta, Av. Garcilaso"
+      },
+      "contact": {
+        "phones": ["984172313"]
+      },
+      "attributes": {
+        "piso": 3
+      }
+    }
+  ]

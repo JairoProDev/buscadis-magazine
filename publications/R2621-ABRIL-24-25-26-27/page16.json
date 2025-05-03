@@ -1,0 +1,133 @@
+[
+    {
+      "title": "Servicio de Transporte Turístico Privado",
+      "description": "Ofrecemos servicio de transporte turístico privado en Cusco y Valle Sagrado. Unidades modernas y conductores profesionales.",
+      "images": [],
+      "categorySlug": "servicios",
+      "subcategorySlug": "transporte-mudanzas-mensajeria",
+      "subSubcategorySlug": "transporte-turistico-privado",
+      "location": {
+        "province": "Cusco",
+        "address": "Cusco y Valle Sagrado"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "tipo_vehiculo": "unidades_modernas",
+        "conductores": "profesionales"
+      }
+    },
+    {
+      "title": "Masajes Relajantes y Terapéuticos a Domicilio",
+      "description": "Terapeuta profesional ofrece masajes relajantes, descontracturantes y terapéuticos a domicilio.",
+      "images": [],
+      "categorySlug": "servicios",
+      "subcategorySlug": "salud-bienestar",
+      "subSubcategorySlug": "masajes-terapeuticos-relajantes-antiestres",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "tipo_masaje": ["relajante", "descontracturante", "terapeutico"],
+        "modalidad_servicio": "a_domicilio"
+      }
+    },
+    {
+      "title": "Abogado Especialista en Temas Civiles y Familiares",
+      "description": "Asesoría legal y patrocinio en procesos civiles (contratos, propiedades) y familiares (divorcios, alimentos).",
+      "images": [],
+      "categorySlug": "servicios",
+      "subcategorySlug": "profesionales-asesoria",
+      "subSubcategorySlug": "legales-abogados",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "especialidad_legal": ["civil", "familiar"],
+        "areas_civiles": ["contratos", "propiedades"],
+        "areas_familiares": ["divorcios", "alimentos"]
+      }
+    },
+    {
+      "title": "Vendo Artículos de Ferretería al por Mayor",
+      "description": "Distribuidor mayorista vende artículos de ferretería en general. Precios competitivos.",
+      "images": [],
+      "categorySlug": "productos",
+      "subcategorySlug": "herramientas-materiales",
+      "subSubcategorySlug": "ferreteria-general",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "tipo_venta": "mayorista",
+        "tipo_producto": "articulos_ferreteria"
+      }
+    },
+    {
+      "title": "Servicio de Jardinería y Mantenimiento de Áreas Verdes",
+      "description": "Realizamos diseño, implementación y mantenimiento de jardines y áreas verdes para casas, condominios y empresas.",
+      "images": [],
+      "categorySlug": "servicios",
+      "subcategorySlug": "reparaciones-mantenimiento-tecnicos",
+      "subSubcategorySlug": "jardineria-mantenimiento-areas-verdes",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "servicios_ofrecidos": ["diseño_jardines", "implementacion_jardines", "mantenimiento_jardines"],
+        "aplicacion": ["casas", "condominios", "empresas"]
+      }
+    },
+    {
+      "title": "Consultoría Contable y Tributaria para Empresas",
+      "description": "Brindamos asesoría contable y tributaria especializada para MYPES y empresas. Declaraciones, libros contables, planeamiento.",
+      "images": [],
+      "categorySlug": "servicios",
+      "subcategorySlug": "profesionales-asesoria",
+      "subSubcategorySlug": "contables-tributarios-auditoria",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "publico_objetivo": ["mypes", "empresas"],
+        "servicios_ofrecidos": ["declaraciones_impuestos", "libros_contables", "planeamiento_tributario"]
+      }
+    },
+    {
+      "title": "Objeto Perdido: Billetera con Documentos",
+      "description": "Se perdió billetera de cuero color negro, conteniendo DNI, tarjetas y otros documentos a nombre de Juan Pérez. Se gratificará su devolución.",
+      "images": [],
+      "categorySlug": "comunidad",
+      "subcategorySlug": "objetos-perdidos-encontrados",
+      "location": {
+        "province": "Cusco",
+        "referencePoint": "Zona centro / Mercado San Pedro (Referencial)"
+      },
+      "contact": {
+        "phones": ["937054328"]
+      },
+      "attributes": {
+        "objeto_perdido": "billetera",
+        "descripcion_objeto": "cuero_negro",
+        "contenido_objeto": ["dni", "tarjetas", "documentos"],
+        "nombre_propietario": "Juan Pérez",
+        "ofrece_recompensa": true
+      }
+    }
+  ]

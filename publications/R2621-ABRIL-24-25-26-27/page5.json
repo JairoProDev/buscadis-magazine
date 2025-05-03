@@ -1,0 +1,281 @@
+[
+    {
+      "title": "Alquiler Departamento 3 Dormitorios - Urb. Fideranda",
+      "description": "Se alquila departamento en 4to piso. Consta de 3 dormitorios, sala-comedor, cocina, lavandería, baño y depósito. Con medidor de luz y agua independientes.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Urb. Fideranda, Calle G N°15"
+      },
+      "contact": {
+        "phones": ["984628360", "984628349"]
+      },
+      "attributes": {
+        "dormitorios": 3,
+        "banos": 1,
+        "piso": 4,
+        "ambientes": ["sala_comedor", "cocina", "lavanderia", "deposito"],
+        "medidores_independientes": ["luz", "agua"]
+      }
+    },
+    {
+      "title": "Alquilo Departamento 2 Dormitorios Amoblado - Urb. Magisterio",
+      "description": "Alquilo bonito departamento amoblado en 1ra Etapa de Magisterio, 1er piso. Consta de 2 dormitorios, sala-comedor, cocina, baño y lavandería. Con medidores independientes.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "district": "Cusco",
+        "address": "Urb. Magisterio, 1ra Etapa"
+      },
+      "contact": {
+        "phones": ["974712418"]
+      },
+      "attributes": {
+        "dormitorios": 2,
+        "banos": 1,
+        "piso": 1,
+        "amoblado": "si",
+        "ambientes": ["sala_comedor", "cocina", "lavanderia"],
+        "medidores_independientes": true
+      }
+    },
+    {
+      "title": "Señorita Busca Habitación en Alquiler - Céntrico",
+      "description": "Señorita que trabaja busca habitación en alquiler con baño privado, agua caliente, internet. Preferencia zonas: Magisterio, Marcavalle, Av. La Cultura, Ttio, Larapa, Santa Mónica.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "habitaciones",
+      "subSubcategorySlug": "simple-personal",
+      "location": {
+        "province": "Cusco",
+        "address": "Zonas Céntricas (Magisterio, Marcavalle, Av. Cultura, Ttio, Larapa, Santa Mónica)"
+      },
+      "contact": {
+        "phones": ["920666305"]
+      },
+      "attributes": {
+        "tipo_busqueda": "solicitud_alquiler",
+        "publico_objetivo": "senorita_trabajadora",
+        "requisitos_habitacion": ["bano_privado", "agua_caliente", "internet"]
+      }
+    },
+    {
+      "title": "Alquilo Habitación Independiente - Ttio",
+      "description": "Alquilo habitación con entrada independiente, baño privado, agua caliente. Ideal para persona sola o pareja sin hijos ni mascotas. No cocina. Precio S/450.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "habitaciones",
+      "subSubcategorySlug": "simple-personal",
+      "amount": 450,
+      "currency": "PEN",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Urb. Ttio, Psje. Los Tulipanes D-12"
+      },
+      "contact": {
+        "phones": ["958287261"]
+      },
+      "attributes": {
+        "entrada_independiente": true,
+        "bano_privado": true,
+        "servicios_incluidos": ["agua_caliente"],
+        "publico_objetivo": "persona_sola_o_pareja",
+        "restricciones": ["sin_hijos", "sin_mascotas", "no_cocina"]
+      }
+    },
+    {
+      "title": "Alquiler Departamento 2 Dormitorios Amoblado - Centro Histórico",
+      "description": "Se alquila departamento completamente amoblado en el Centro Histórico, cerca a Plaza de Armas. Consta de 2 dormitorios, sala, comedor, cocina equipada, baño. Incluye todos los servicios (agua, luz, cable, internet).",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "district": "Cusco",
+        "address": "Centro Histórico",
+        "referencePoint": "Cerca a Plaza de Armas"
+      },
+      "contact": {
+        "phones": ["946407103"]
+      },
+      "attributes": {
+        "dormitorios": 2,
+        "banos": 1,
+        "amoblado": "si",
+        "ambientes": ["sala", "comedor", "cocina_equipada"],
+        "servicios_incluidos": ["agua", "luz", "cable", "internet"]
+      }
+    },
+    {
+      "title": "Vendo Lote 120m² - Urb. Entel Perú C-13, San Sebastián",
+      "description": "Ocasión: Vendo lote de 120m² en Urb. Entel Perú, C-13, San Sebastián. Precio conversable.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "terrenos-lotes",
+      "subSubcategorySlug": "terreno-urbano-residencial",
+      "negotiable": true,
+      "location": {
+        "province": "Cusco",
+        "district": "San Sebastián",
+        "address": "Urb. Entel Perú C-13"
+      },
+      "contact": {
+        "phones": ["958189663"]
+      },
+      "attributes": {
+        "area_m2": 120
+      }
+    },
+    {
+      "title": "Alquilo Local Comercial 200m² - 3er Paradero San Sebastián",
+      "description": "Se alquila amplio local comercial de 200m² en primer piso, con vista a la calle. Ideal para diferentes negocios.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "locales-comerciales",
+      "subSubcategorySlug": "tienda-puerta-calle",
+      "location": {
+        "province": "Cusco",
+        "district": "San Sebastián",
+        "address": "Av. Cusco",
+        "referencePoint": "3er paradero San Sebastián"
+      },
+      "contact": {
+        "phones": ["984407615"]
+      },
+      "attributes": {
+        "area_m2": 200,
+        "piso": 1,
+        "vista_calle": true
+      }
+    },
+    {
+      "title": "Alquilo Departamento 3 Dormitorios - Urb. Santa Beatriz",
+      "description": "Alquilo departamento en 3er piso. Consta de 3 dormitorios, sala-comedor, cocina, lavandería y 2 baños. Ideal para familia.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Urb. Santa Beatriz A-12"
+      },
+      "contact": {
+        "phones": ["984407615"]
+      },
+      "attributes": {
+        "dormitorios": 3,
+        "banos": 2,
+        "piso": 3,
+        "ambientes": ["sala_comedor", "cocina", "lavanderia"],
+        "publico_objetivo": "familia"
+      }
+    },
+    {
+      "title": "Alquiler Departamento 3 Dormitorios - Av. Collasuyo",
+      "description": "Se alquila departamento en 2do piso. Consta de 3 dormitorios, sala-comedor, cocina-lavandería, 2 baños. Medidores de luz y agua independientes.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "address": "Av. Collasuyo, Urb. Tawantinsuyo",
+        "referencePoint": "Paradero Control"
+      },
+      "contact": {
+        "phones": ["984302145"]
+      },
+      "attributes": {
+        "dormitorios": 3,
+        "banos": 2,
+        "piso": 2,
+        "ambientes": ["sala_comedor", "cocina_lavanderia"],
+        "medidores_independientes": ["luz", "agua"]
+      }
+    },
+    {
+      "title": "Alquilo Habitación Amoblada Independiente - Urb. Santa Mónica",
+      "description": "Alquilo habitación amoblada, entrada independiente, baño privado. Incluye agua caliente, luz, internet, cable. Ideal para persona sola o pareja que trabajen o estudien. Precio S/500.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "habitaciones",
+      "subSubcategorySlug": "doble-matrimonial",
+      "amount": 500,
+      "currency": "PEN",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Urb. Santa Mónica"
+      },
+      "contact": {
+        "phones": ["932320380", "958300819"]
+      },
+      "attributes": {
+        "amoblado": "si",
+        "entrada_independiente": true,
+        "bano_privado": true,
+        "servicios_incluidos": ["agua_caliente", "luz", "internet", "cable"],
+        "publico_objetivo": "persona_sola_o_pareja_trabaja_estudia"
+      }
+    },
+    {
+      "title": "Vendo Casa Material Noble 3 Pisos - Urb. Versalles, San Jerónimo",
+      "description": "Se vende casa de material noble de 3 pisos con proyección a 4. Área de terreno 147m², área construida 350m². Papeles en regla. Precio conversable.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "casas",
+      "subSubcategorySlug": "casa-urbana",
+      "negotiable": true,
+      "location": {
+        "province": "Cusco",
+        "district": "San Jerónimo",
+        "address": "Urb. Versalles E-11"
+      },
+      "contact": {
+        "phones": ["984709328"]
+      },
+      "attributes": {
+        "area_terreno_m2": 147,
+        "area_construida_m2": 350,
+        "pisos": 3,
+        "proyeccion_pisos": 4,
+        "material_construccion": "noble",
+        "documentacion_regla": true
+      }
+    },
+    {
+      "title": "Anticresis Departamento Estreno 2 Dormitorios - San Sebastián",
+      "description": "Doy en anticresis departamento de estreno en 2do piso. Consta de 2 dormitorios, sala-comedor, cocina y baño.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "district": "San Sebastián",
+        "address": "Urb. Los Nogales",
+        "referencePoint": "A una cuadra del Colegio Diego Quispe"
+      },
+      "contact": {
+        "phones": ["984709328"]
+      },
+      "attributes": {
+        "tipo_contrato": "anticresis",
+        "condicion": "estreno",
+        "piso": 2,
+        "dormitorios": 2,
+        "banos": 1,
+        "ambientes": ["sala_comedor", "cocina"]
+      }
+    }
+  ]

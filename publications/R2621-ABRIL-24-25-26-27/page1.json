@@ -1,0 +1,189 @@
+[
+    {
+      "title": "Reforzamiento Escolar - Matemática y Comunicación (Salita de Tareas Santa Mónica)",
+      "description": "Reforzamiento escolar en Matemática y Comunicación para niños de 6 a 12 años. Inicio inmediato. 100% Personalizado.",
+      "images": [],
+      "categorySlug": "servicios",
+      "subcategorySlug": "educacion-clases-talleres",
+      "subSubcategorySlug": "clases-particulares-refuerzo-escolar",
+      "location": {
+        "province": "Cusco",
+        "address": "Av. Los Incas 1702, 3er. piso Of. 305",
+        "referencePoint": "a media cuadra del ICPNA"
+      },
+      "contact": {
+        "phones": ["950682630"]
+      }
+    },
+    {
+      "title": "Servicios Veterinarios a Domicilio - Campaña Económica",
+      "description": "Peluquería con baño gato S/35, perro S/25. Vacuna S/30, anticonceptivos S/26, esterilización gata/perrita S/50-70, esterilización perro/gato S/35-50, limpieza dental S/30, extracción dental, eutanasia S/35-45. Costo social.",
+      "images": [],
+      "categorySlug": "servicios",
+      "subcategorySlug": "servicios-mascotas",
+      "subSubcategorySlug": "veterinaria-consultas-domicilio",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+         "phones": ["924349665"]
+      },
+       "attributes": {
+         "servicio_domicilio": true,
+         "lista_servicios": [
+           "peluqueria_bano_gato", "peluqueria_bano_perro", "vacunacion",
+           "anticonceptivos", "esterilizacion_hembra", "esterilizacion_macho",
+           "limpieza_dental", "extraccion_dental", "eutanasia"
+         ]
+       }
+    },
+    {
+      "title": "Vendo Oficina 306 en CC Plaza Belén",
+      "description": "Oficina en venta en el Centro Comercial Plaza Belén. Zona estratégica, a un paso del nuevo Hospital Antonio Lorena y Centro de Salud Belenpampa. Con baño privado.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "oficinas",
+      "subSubcategorySlug": "oficina-independiente-privada",
+      "location": {
+        "province": "Cusco",
+        "district": "Belén",
+        "address": "Centro Comercial Plaza Belén, Oficina 306",
+        "referencePoint": "Cerca Hospital Antonio Lorena y C.S. Belenpampa"
+      },
+      "contact": {
+        "phones": ["951252643"]
+      },
+      "attributes": {
+          "banos": 1
+      }
+    },
+    {
+      "title": "Oportunidad Laboral Notarial - Bachiller/Estudiante Derecho",
+      "description": "Notaría de prestigio busca talento joven (bachiller en Derecho o estudiante), responsable y con ganas de crecer. Excelente remuneración y oportunidad de aprendizaje.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "legal-notarial",
+      "subSubcategorySlug": "asistente-notarial",
+      "location": {
+          "province": "Cusco"
+      },
+      "contact": {
+         "phones": ["984407991"]
+      },
+      "attributes": {
+          "nivel_educacion": "bachiller_derecho_o_estudiante",
+          "requisitos": ["responsable", "ganas_de_crecer"]
+      }
+    },
+    {
+      "title": "Se Necesita Griferos - Servicentro Jakeline",
+      "description": "Se necesita griferos con o sin experiencia, con ganas de trabajar, responsables y honestos. Disponibilidad inmediata.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "ventas-comercial-marketing",
+      "subSubcategorySlug": "atencion-cliente",
+      "location": {
+        "province": "Cusco",
+        "district": "San Sebastián",
+        "address": "Prolong. Av. de la Cultura 1850",
+        "referencePoint": "Altura 6to paradero San Sebastián, Servicentro Jakeline"
+      },
+      "contact": {
+         "phones": ["920696748", "984686022"],
+         "name": "Servicentro Jakeline"
+      },
+      "attributes": {
+          "experiencia_requerida": "con_o_sin_experiencia",
+          "disponibilidad": "inmediata"
+      }
+    },
+    {
+      "title": "Local Comercial en Alquiler - Urb. La Florida",
+      "description": "Excelente ubicación, Urb. La Florida, 3er paradero de subida (lado de la TINKA). Ideal para Consultorios médicos, sala de ventas, farmacias, oficinas, similares. Consta de 4 divisiones, sala de espera, sala principal, bodega o depósito, SSHH.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "locales-comerciales",
+      "subSubcategorySlug": "consultorio-oficina-profesional",
+      "location": {
+        "province": "Cusco",
+        "address": "Urb. La Florida",
+        "referencePoint": "3er paradero de subida, lado de TINKA"
+      },
+      "contact": {
+         "phones": []
+      },
+      "attributes": {
+          "divisiones": 4,
+          "ambientes": ["sala_espera", "sala_principal", "bodega_deposito", "sshh"]
+      }
+    },
+    {
+      "title": "Se Necesita Cocinera con Experiencia - Para Familia Corta",
+      "description": "Se necesita cocinera con experiencia para familia corta. Horario: 6:00am a 7:00pm. Sueldo: 2,000 soles de lunes a sábado.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "trabajo-domestico",
+      "subSubcategorySlug": "cocinero-domestico",
+      "amount": 2000,
+      "currency": "PEN",
+      "location": {
+        "province": "Cusco",
+        "district": "San Sebastián",
+        "referencePoint": "Presentarse en 6to. paradero de San Sebastián (Servicentro Jakeline)"
+      },
+      "contact": {
+        "phones": ["984686022"],
+         "name": "Servicentro Jakeline"
+      },
+      "attributes": {
+          "experiencia_requerida": true,
+          "horario": "L-S 6am-7pm",
+          "tipo_empleador": "familia_corta"
+      }
+    },
+    {
+      "title": "Venta de Terreno 9,600 m² - Pata Pata Alta, San Jerónimo",
+      "description": "Terreno de 9,600 m² en Pata Pata Alta, San Jerónimo. Cuenta con cancha deportiva, áreas verdes y construcción de 3 pisos material noble. Ideal para quinta campestre, parque recreacional o inversión privada.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "terrenos-lotes",
+      "subSubcategorySlug": "terreno-agricola-rural",
+      "location": {
+          "province": "Cusco",
+          "district": "San Jerónimo",
+          "address": "Pata Pata Alta"
+      },
+      "contact": {
+          "phones": ["992259908", "901607583"]
+      },
+      "attributes": {
+          "area_m2": 9600,
+          "infraestructura_existente": ["cancha_deportiva", "areas_verdes", "construccion_3_pisos_material_noble"],
+          "usos_potenciales": ["quinta_campestre", "parque_recreacional", "inversion_privada"]
+      }
+    },
+    {
+      "title": "Personal para Cadena de Restaurantes",
+      "description": "Requiere: Panadero (centro producción), Cocinero (centro producción), Barman (restaurante Urubamba), Jefe de servicio (Urubamba, inglés), Mozo (Cusco, inglés).",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "hosteleria-restaurantes-turismo",
+      "location": {
+          "province": "Cusco"
+      },
+      "contact": {
+          "phones": ["984472316"],
+          "email": "aaliaga@cuscorestaurants.com",
+          "name": "Cadena de Restaurantes"
+      },
+       "attributes": {
+          "puestos_requeridos": [
+            {"puesto": "panadero", "ubicacion": "centro_produccion"},
+            {"puesto": "cocinero", "ubicacion": "centro_produccion"},
+            {"puesto": "barman", "ubicacion": "urubamba", "requisitos": ["vivir_en_urubamba"]},
+            {"puesto": "jefe_servicio", "ubicacion": "urubamba", "requisitos": ["vivir_en_urubamba", "dominio_ingles"]},
+            {"puesto": "mozo", "ubicacion": "cusco", "requisitos": ["dominio_ingles"]}
+          ]
+       }
+    }
+  ]

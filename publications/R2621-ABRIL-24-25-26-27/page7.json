@@ -1,0 +1,288 @@
+[
+    {
+      "title": "Alquilo Habitación Amoblada Independiente - Urb. Kennedy A",
+      "description": "Alquilo habitación amoblada, con entrada independiente y baño privado. Servicios incluidos: agua caliente, luz, internet. Para persona sola o pareja que trabaje. Precio S/550.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "habitaciones",
+      "subSubcategorySlug": "doble-matrimonial",
+      "amount": 550,
+      "currency": "PEN",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Urb. Kennedy A"
+      },
+      "contact": {
+        "phones": ["932320380", "958300819"]
+      },
+      "attributes": {
+        "amoblado": "si",
+        "entrada_independiente": true,
+        "bano_privado": true,
+        "servicios_incluidos": ["agua_caliente", "luz", "internet"],
+        "publico_objetivo": "persona_sola_o_pareja_trabajadora"
+      }
+    },
+    {
+      "title": "Alquilo Departamento 2 Dormitorios - Urb. Los Andenes",
+      "description": "Se alquila departamento en 2do piso. Consta de 2 dormitorios, sala-comedor, cocina, lavandería y baño.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Urb. Los Andenes"
+      },
+      "contact": {
+        "phones": ["984709328"]
+      },
+      "attributes": {
+        "piso": 2,
+        "dormitorios": 2,
+        "banos": 1,
+        "ambientes": ["sala_comedor", "cocina", "lavanderia"]
+      }
+    },
+    {
+      "title": "Alquilo Tienda con Depósito - Calle Belén",
+      "description": "Alquilo tienda con depósito y baño incluido. Ideal para diversos rubros comerciales.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "locales-comerciales",
+      "subSubcategorySlug": "tienda-puerta-calle",
+      "location": {
+        "province": "Cusco",
+        "district": "Cusco",
+        "address": "Calle Belén"
+      },
+      "contact": {
+        "phones": ["984709328"]
+      },
+      "attributes": {
+        "ambientes": ["tienda", "deposito", "bano"]
+      }
+    },
+    {
+      "title": "Alquilo Habitación con Baño Privado - Urb. Progreso",
+      "description": "Alquilo habitación para persona sola, con baño privado. Ubicada en Urb. Progreso.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "habitaciones",
+      "subSubcategorySlug": "simple-personal",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Urb. Progreso"
+      },
+      "contact": {
+        "phones": ["984709328"]
+      },
+      "attributes": {
+        "bano_privado": true,
+        "publico_objetivo": "persona_sola"
+      }
+    },
+    {
+      "title": "Alquilo Mini Departamento Amoblado - Urb. Manuel Prado",
+      "description": "Se alquila mini departamento amoblado en 4to piso. Consta de 1 dormitorio, sala-cocina, baño y lavandería. Ideal para persona sola o pareja.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estudio-loft",
+      "location": {
+        "province": "Cusco",
+        "address": "Urb. Manuel Prado"
+      },
+      "contact": {
+        "phones": ["984709328"]
+      },
+      "attributes": {
+        "piso": 4,
+        "dormitorios": 1,
+        "banos": 1,
+        "ambientes": ["sala_cocina", "lavanderia"],
+        "amoblado": "si",
+        "publico_objetivo": "persona_sola_o_pareja"
+      }
+    },
+    {
+      "title": "Alquilo Departamento Estreno 3 Dormitorios - San Sebastián",
+      "description": "Alquilo departamento de estreno en 1er piso. Consta de 3 dormitorios, sala-comedor, cocina, 2 baños y lavandería.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "district": "San Sebastián",
+        "address": "Urb. Vista Alegre"
+      },
+      "contact": {
+        "phones": ["984709328"]
+      },
+      "attributes": {
+        "condicion": "estreno",
+        "piso": 1,
+        "dormitorios": 3,
+        "banos": 2,
+        "ambientes": ["sala_comedor", "cocina", "lavanderia"]
+      }
+    },
+    {
+      "title": "Vendo Casa Como Terreno 200m² - Av. 28 de Julio",
+      "description": "Vendo casa como terreno de 200m² (10x20m). Ubicada en esquina, en plena Av. 28 de Julio, zona comercial.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "terrenos-lotes",
+      "subSubcategorySlug": "terreno-comercial",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Av. 28 de Julio"
+      },
+      "contact": {
+        "phones": ["984709328"]
+      },
+      "attributes": {
+        "area_m2": 200,
+        "medidas": "10x20",
+        "ubicacion_esquina": true,
+        "zona_comercial": true,
+        "tipo_venta": "casa_como_terreno"
+      }
+    },
+    {
+      "title": "Alquilo Departamento 3 Dormitorios Amoblado - Magisterio",
+      "description": "Alquilo departamento amoblado en 3ra etapa de Magisterio. Consta de 3 dormitorios, sala-comedor, cocina, baño y lavandería. Precio $500 USD.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "amount": 500,
+      "currency": "USD",
+      "location": {
+        "province": "Cusco",
+        "district": "Cusco",
+        "address": "Urb. Magisterio, 3ra Etapa"
+      },
+      "contact": {
+        "phones": ["984709328"]
+      },
+      "attributes": {
+        "dormitorios": 3,
+        "banos": 1,
+        "amoblado": "si",
+        "ambientes": ["sala_comedor", "cocina", "lavanderia"]
+      }
+    },
+    {
+      "title": "Vendo Terreno 128m² - APROMAC, San Jerónimo",
+      "description": "Vendo terreno de 128m² en APROMAC - San Jerónimo. Precio conversable.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "terrenos-lotes",
+      "subSubcategorySlug": "terreno-urbano-residencial",
+      "negotiable": true,
+      "location": {
+        "province": "Cusco",
+        "district": "San Jerónimo",
+        "address": "APROMAC"
+      },
+      "contact": {
+        "phones": ["984709328"]
+      },
+      "attributes": {
+        "area_m2": 128
+      }
+    },
+    {
+      "title": "Anticresis Mini Departamento + Local Comercial - Av. Costanera",
+      "description": "Anticresis: Mini departamento + Local comercial. Ideal para vivienda y negocio. Ubicado en plena Av. Costanera.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estudio-loft",
+      "location": {
+        "province": "Cusco",
+        "address": "Av. Costanera"
+      },
+      "contact": {
+        "phones": ["984709328"]
+      },
+      "attributes": {
+        "tipo_contrato": "anticresis",
+        "incluye_local_comercial": true
+      }
+    },
+    {
+      "title": "Alquilo Habitación Amoblada Baño Privado - Urb. Ttio",
+      "description": "Se alquila habitación amplia y amoblada, con baño privado. Incluye Wi-Fi. Ubicada en Urb. Ttio.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "habitaciones",
+      "subSubcategorySlug": "simple-personal",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Urb. Ttio"
+      },
+      "contact": {
+        "phones": ["984709328"]
+      },
+      "attributes": {
+        "amoblado": "si",
+        "bano_privado": true,
+        "servicios_incluidos": ["wifi"]
+      }
+    },
+    {
+      "title": "Alquilo Mini Departamento Independiente Amoblado - San Sebastián",
+      "description": "Alquilo mini departamento con entrada independiente, totalmente amoblado, en 1er piso. Consta de 1 dormitorio, cocina, sala y baño. Ideal para persona sola o pareja.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estudio-loft",
+      "location": {
+        "province": "Cusco",
+        "district": "San Sebastián",
+        "address": "Urb. Santa Rosa"
+      },
+      "contact": {
+        "phones": ["984709328"]
+      },
+      "attributes": {
+        "entrada_independiente": true,
+        "amoblado": "si",
+        "piso": 1,
+        "dormitorios": 1,
+        "banos": 1,
+        "ambientes": ["cocina", "sala"],
+        "publico_objetivo": "persona_sola_o_pareja"
+      }
+    },
+    {
+      "title": "Vendo Casa 3 Pisos + Aires 135m² - San Blas",
+      "description": "Ocasión: Vendo casa de 3 pisos más aires, con 135m² de terreno. Ubicada en zona turística de San Blas.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "casas",
+      "subSubcategorySlug": "casa-urbana",
+      "location": {
+        "province": "Cusco",
+        "district": "Cusco",
+        "address": "San Blas"
+      },
+      "contact": {
+        "phones": ["984709328"]
+      },
+      "attributes": {
+        "pisos": 3,
+        "area_terreno_m2": 135,
+        "incluye_aires": true,
+        "zona_turistica": true
+      }
+    }
+  ]

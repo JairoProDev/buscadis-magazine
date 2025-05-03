@@ -1,0 +1,194 @@
+[
+    {
+      "title": "SE NECESITA AYUDANTE DE COCINA",
+      "description": "Ayudante de cocina part time o tiempo completo, con experiencia. Para juguería.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "hosteleria-restaurantes-turismo",
+      "subSubcategorySlug": "ayudante-cocina",
+      "location": {
+        "province": "Cusco",
+        "address": "Maruri 262"
+      },
+      "contact": {
+        "phones": ["984707052", "984760277"],
+        "name": "Juguería Maruri 262"
+      },
+      "attributes": {
+        "experiencia_requerida": true,
+        "horario": "part_time_o_tiempo_completo",
+        "tipo_negocio": "jugueria"
+      }
+    },
+    {
+      "title": "SE NECESITA SEÑORITA PARA ATENCIÓN AL CLIENTE",
+      "description": "Atención al público con/sin experiencia, carismática, proactiva. Para empresa.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "ventas-comercial-marketing",
+      "subSubcategorySlug": "atencion-cliente",
+      "location": {
+        "province": "Cusco",
+        "address": "Maruri 262"
+      },
+      "contact": {
+        "phones": ["984707052", "984760277"]
+      },
+      "attributes": {
+        "experiencia_requerida": "con_o_sin_experiencia",
+        "habilidades_requeridas": ["carismatica", "proactiva"],
+        "genero_requerido": "femenino"
+      }
+    },
+    {
+      "title": "SE NECESITA MOZO",
+      "description": "Con experiencia, responsable, proactivo, dinámico, trabajo bajo presión. Para juguería.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "hosteleria-restaurantes-turismo",
+      "subSubcategorySlug": "mozo-azafata",
+      "location": {
+        "province": "Cusco",
+        "address": "Maruri 262"
+      },
+      "contact": {
+        "phones": ["984707052", "984760277"],
+        "name": "Juguería Maruri 262"
+      },
+      "attributes": {
+        "experiencia_requerida": true,
+        "habilidades_requeridas": ["responsable", "proactivo", "dinamico", "trabajo_bajo_presion"],
+        "tipo_negocio": "jugueria"
+      }
+    },
+    {
+      "title": "NECESITO PROFESIONALES PARA PROYECTO ARQUITECTÓNICO",
+      "description": "Arquitecto(a) y/o Ing. Civil colegiado, Ing. Sanitario colegiado, Ing. Electricista colegiado. Con experiencia en elaboración y ejecución de proyectos. Enviar CV.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "construccion-mantenimiento-oficios",
+      "subSubcategorySlug": "ing-arq-residente-asistente",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["993960719", "996677386"],
+        "email": "proyectos@gmail.com"
+      },
+      "attributes": {
+        "puestos_requeridos": [
+          {"profesion": "arquitecto_o_ing_civil", "requisitos": ["colegiado", "experiencia_elaboracion_ejecucion_proyectos"]},
+          {"profesion": "ing_sanitario", "requisitos": ["colegiado", "experiencia_elaboracion_ejecucion_proyectos"]},
+          {"profesion": "ing_electricista", "requisitos": ["colegiado", "experiencia_elaboracion_ejecucion_proyectos"]}
+        ]
+      }
+    },
+      {
+      "title": "EMPRESA HOTELERA NECESITA RECEPCIONISTA",
+      "description": "Recepcionista turno tarde 1:30pm a 10:30pm. Con experiencia, conocimiento básico de inglés, computación, documentos contables, atención al cliente. Proactivo, honrado, responsable. Presentar CV.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "hosteleria-restaurantes-turismo",
+      "subSubcategorySlug": "recepcionista-hotel",
+      "location": {
+        "province": "Cusco",
+        "address": "Calle San Andrés 470"
+      },
+      "contact": {
+         "phones": [],
+         "name": "Empresa Hotelera"
+      },
+      "attributes": {
+        "experiencia_requerida": true,
+        "conocimientos": ["ingles_basico", "computacion", "documentos_contables", "atencion_cliente"],
+        "habilidades_requeridas": ["proactivo", "honrado", "responsable"],
+        "horario": "tarde_1:30pm_10:30pm"
+      }
+    },
+    {
+      "title": "RESTAURANTE TURÍSTICO REQUIERE PERSONAL",
+      "description": "Cocinero(a), Ayudante de cocina, Mozo(a) con inglés básico. Con experiencia, buena presencia, carismático, facilidad de palabra, responsable, puntual. Tiempo completo.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "hosteleria-restaurantes-turismo",
+      "location": {
+        "province": "Cusco",
+        "address": "Calle Ruinas 432"
+      },
+      "contact": {
+         "phones": [],
+         "name": "Restaurante Turístico"
+      },
+      "attributes": {
+         "puestos_requeridos": ["cocinero", "ayudante_cocina", "mozo"],
+         "experiencia_requerida": true,
+         "requisitos_generales": ["buena_presencia", "carismatico", "facilidad_palabra", "responsable", "puntual"],
+         "requisitos_mozo": ["ingles_basico"],
+         "horario": "tiempo_completo"
+      }
+    },
+    {
+      "title": "SE REQUIERE PROFESORES DE MATEMÁTICA Y COMUNICACIÓN",
+      "description": "Para trabajar por horas en nivel primaria y secundaria.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "educacion-docencia",
+      "subSubcategorySlug": "docente-primaria",
+      "location": {
+        "province": "Cusco",
+        "address": "Urb. Fideranda F-2-A, 2do piso, Of. 4",
+        "referencePoint": "A una cuadra y media de la Av. La Cultura, frente Colegio Fideranda"
+      },
+      "contact": {
+         "phones": ["947909699"]
+      },
+       "attributes": {
+          "areas_requeridas": ["matematica", "comunicacion"],
+          "niveles": ["primaria", "secundaria"],
+          "modalidad_contrato": "por_horas"
+       }
+    },
+    {
+      "title": "SE NECESITA AZAFATA",
+      "description": "Para atención en Cafetín-Restaurant. Tiempo completo o medio tiempo.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "hosteleria-restaurantes-turismo",
+      "subSubcategorySlug": "mozo-azafata",
+      "location": {
+        "province": "Cusco",
+        "address": "Calle Belén 806"
+      },
+      "contact": {
+         "phones": ["984119112"]
+      },
+      "attributes": {
+         "horario": "tiempo_completo_o_medio_tiempo",
+         "tipo_negocio": "cafetin_restaurant"
+      }
+    },
+    {
+      "title": "OCASIÓN VENDO TERRENO 200M² SAN JERÓNIMO",
+      "description": "Terreno de 200m² con frentera de 10ml, cuenta con todos los servicios básicos, con parámetros para 5 pisos. Ubicado en Urb. Las Joyas - San Jerónimo.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "terrenos-lotes",
+      "subSubcategorySlug": "terreno-urbano-residencial",
+      "amount": null,
+      "currency": null,
+      "location": {
+          "province": "Cusco",
+          "district": "San Jerónimo",
+          "address": "Urb. Las Joyas"
+      },
+      "contact": {
+          "phones": ["944784199"]
+      },
+      "attributes": {
+          "area_m2": 200,
+          "medidas_frente_ml": 10,
+          "servicios_basicos": true,
+          "parametros_construccion_pisos": 5
+      }
+    }
+  ]

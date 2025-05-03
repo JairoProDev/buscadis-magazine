@@ -1,0 +1,214 @@
+[
+    {
+      "title": "Reparación y Mantenimiento de Computadoras y Laptops",
+      "description": "Servicio técnico especializado en reparación y mantenimiento de computadoras, laptops. Todas las marcas. Formateo, instalación de programas, recuperación de datos.",
+      "images": [],
+      "categorySlug": "servicios",
+      "subcategorySlug": "reparaciones-mantenimiento-tecnicos",
+      "subSubcategorySlug": "reparacion-computadoras-laptops",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "servicios_ofrecidos": ["reparacion", "mantenimiento", "formateo", "instalacion_programas", "recuperacion_datos"],
+        "equipos_soportados": ["computadoras", "laptops"],
+        "marcas_soportadas": "todas"
+      }
+    },
+    {
+      "title": "Servicio de Gasfitería Profesional",
+      "description": "Servicio de gasfitería en general. Instalaciones sanitarias, reparación de fugas, desatoros.",
+      "images": [],
+      "categorySlug": "servicios",
+      "subcategorySlug": "reparaciones-mantenimiento-tecnicos",
+      "subSubcategorySlug": "gasfiteria-plomeria",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "servicios_ofrecidos": ["instalaciones_sanitarias", "reparacion_fugas", "desatoros"]
+      }
+    },
+    {
+      "title": "Clases Particulares de Matemática y Física",
+      "description": "Profesor particular ofrece clases de nivelación y reforzamiento en matemática y física para nivel escolar y preuniversitario.",
+      "images": [],
+      "categorySlug": "servicios",
+      "subcategorySlug": "educacion-clases-talleres",
+      "subSubcategorySlug": "clases-particulares-refuerzo-escolar",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "areas_ensenanza": ["matematica", "fisica"],
+        "niveles": ["escolar", "preuniversitario"],
+        "tipo_clase": ["nivelacion", "reforzamiento"]
+      }
+    },
+    {
+      "title": "Servicio de Mudanzas y Fletes Locales",
+      "description": "Realizamos servicio de mudanzas y fletes locales en Cusco. Contamos con personal y vehículo adecuado.",
+      "images": [],
+      "categorySlug": "servicios",
+      "subcategorySlug": "transporte-mudanzas-mensajeria",
+      "subSubcategorySlug": "mudanzas-fletes-locales-nacionales",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "tipo_servicio": "mudanzas_fletes",
+        "ambito": "local"
+      }
+    },
+    {
+      "title": "Diseño Gráfico: Logos, Flyers, Banners",
+      "description": "Servicio de diseño gráfico profesional. Creación de logotipos, flyers, banners publicitarios, diseño para redes sociales.",
+      "images": [],
+      "categorySlug": "servicios",
+      "subcategorySlug": "profesionales-asesoria",
+      "subSubcategorySlug": "diseno-publicidad-marketing",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "servicios_ofrecidos": ["creacion_logotipos", "diseno_flyers", "diseno_banners", "diseno_redes_sociales"]
+      }
+    },
+    {
+      "title": "Fotografía y Video Profesional para Eventos",
+      "description": "Cobertura fotográfica y de video para todo tipo de eventos sociales y corporativos. Calidad profesional.",
+      "images": [],
+      "categorySlug": "servicios",
+      "subcategorySlug": "servicios-eventos-catering",
+      "subSubcategorySlug": "fotografia-video-eventos",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "tipo_evento": ["social", "corporativo"]
+      }
+    },
+    {
+      "title": "Vendo Laptop Core i5 - Usada Buen Estado",
+      "description": "Vendo laptop usada con procesador Core i5, 8GB RAM, 500GB disco duro. En buen estado de funcionamiento.",
+      "images": [],
+      "categorySlug": "productos",
+      "subcategorySlug": "electronicos-computacion",
+      "subSubcategorySlug": "laptops-notebooks",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "condicion": "usado",
+        "tipo_producto": "laptop",
+        "procesador": "Core i5",
+        "memoria_ram": "8GB",
+        "almacenamiento": "500GB HDD",
+        "estado": "bueno"
+      }
+    },
+    {
+      "title": "Vendo Celular Samsung Galaxy A52 - Poco Uso",
+      "description": "Vendo celular Samsung Galaxy A52, 128GB almacenamiento. Poco tiempo de uso, como nuevo.",
+      "images": [],
+      "categorySlug": "productos",
+      "subcategorySlug": "celulares-accesorios",
+      "subSubcategorySlug": "celulares-smartphones",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "condicion": "usado",
+        "marca": "Samsung",
+        "modelo": "Galaxy A52",
+        "almacenamiento": "128GB",
+        "estado": "como_nuevo"
+      }
+    },
+    {
+      "title": "Vendo Muebles de Sala Usados - Buen Estado",
+      "description": "Vendo juego de muebles de sala (sofá 3 cuerpos + 2 sillones individuales) usados, en buen estado.",
+      "images": [],
+      "categorySlug": "productos",
+      "subcategorySlug": "hogar-muebles-decoracion",
+      "subSubcategorySlug": "muebles-sala-estar",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "condicion": "usado",
+        "tipo_producto": "juego_muebles_sala",
+        "piezas": ["sofa_3_cuerpos", "sillon_individual_x2"],
+        "estado": "bueno"
+      }
+    },
+    {
+      "title": "Vendo Refrigeradora LG No Frost - Usada",
+      "description": "Vendo refrigeradora marca LG, sistema No Frost. Usada, en buen estado de funcionamiento.",
+      "images": [],
+      "categorySlug": "productos",
+      "subcategorySlug": "electrodomesticos",
+      "subSubcategorySlug": "refrigeradoras-congeladoras",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "condicion": "usado",
+        "tipo_producto": "refrigeradora",
+        "marca": "LG",
+        "sistema_enfriamiento": "No Frost",
+        "estado": "bueno"
+      }
+    },
+    {
+      "title": "Vendo Bicicleta Montañera Aro 29",
+      "description": "Vendo bicicleta montañera aro 29, con cambios Shimano. Poco uso.",
+      "images": [],
+      "categorySlug": "productos",
+      "subcategorySlug": "deportes-hobbies-ocio",
+      "subSubcategorySlug": "ciclismo-bicicletas",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "condicion": "usado",
+        "tipo_producto": "bicicleta_montanera",
+        "tamano_aro": 29,
+        "componentes": "cambios_shimano",
+        "uso": "poco"
+      }
+    }
+  ]

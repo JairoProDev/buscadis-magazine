@@ -1,0 +1,221 @@
+[
+    {
+      "title": "Vendo Auto Hyundai Accent 2014 Full Equipo",
+      "description": "Vendo auto Hyundai Accent, modelo 2014, versión full equipo, mecánico. Uso particular.",
+      "images": [],
+      "categorySlug": "vehiculos",
+      "subcategorySlug": "autos",
+      "subSubcategorySlug": "sedan",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "marca": "Hyundai",
+        "modelo": "Accent",
+        "ano": 2014,
+        "condicion": "usado",
+        "equipamiento": "full_equipo",
+        "transmision": "mecanico",
+        "uso": "particular"
+      }
+    },
+    {
+      "title": "Vendo Camioneta Hyundai Tucson 2013 Automática",
+      "description": "Vendo camioneta Hyundai Tucson, año 2013, caja automática, secuencial. En buen estado.",
+      "images": [],
+      "categorySlug": "vehiculos",
+      "subcategorySlug": "camionetas-suv-vans",
+      "subSubcategorySlug": "suv",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "marca": "Hyundai",
+        "modelo": "Tucson",
+        "ano": 2013,
+        "condicion": "usado",
+        "transmision": "automatica_secuencial",
+        "estado": "bueno"
+      }
+    },
+    {
+      "title": "Vendo Auto Kia Cerato 2015 Full Equipo",
+      "description": "Vendo auto Kia Cerato, año 2015, full equipo. Documentos en regla.",
+      "images": [],
+      "categorySlug": "vehiculos",
+      "subcategorySlug": "autos",
+      "subSubcategorySlug": "sedan",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "marca": "Kia",
+        "modelo": "Cerato",
+        "ano": 2015,
+        "condicion": "usado",
+        "equipamiento": "full_equipo",
+        "documentacion_regla": true
+      }
+    },
+    {
+      "title": "Vendo Minivan DFSK 2014 7 Pasajeros",
+      "description": "Vendo minivan marca DFSK, modelo 2014, capacidad para 7 pasajeros. Ideal para transporte.",
+      "images": [],
+      "categorySlug": "vehiculos",
+      "subcategorySlug": "camionetas-suv-vans",
+      "subSubcategorySlug": "van-pasajeros",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "marca": "DFSK",
+        "ano": 2014,
+        "condicion": "usado",
+        "capacidad_pasajeros": 7,
+        "uso_potencial": "transporte"
+      }
+    },
+    {
+      "title": "Necesito Enfermera Técnica para Cuidado de Adulto Mayor",
+      "description": "Se necesita enfermera técnica cama adentro para cuidado de adulto mayor.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "salud-cuidado-personal",
+      "subSubcategorySlug": "cuidador-ninos-ancianos-pacientes",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "puesto_requerido": "enfermera_tecnica",
+        "modalidad_trabajo": "cama_adentro",
+        "area_cuidado": "adulto_mayor"
+      }
+    },
+    {
+      "title": "Necesito Personal de Limpieza para Condominio",
+      "description": "Se necesita personal de limpieza con experiencia para condominio en Urb. Larapa.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "construccion-mantenimiento-oficios",
+      "subSubcategorySlug": "tecnico-mantenimiento-general",
+      "location": {
+        "province": "Cusco",
+        "district": "San Jerónimo",
+        "address": "Urb. Larapa"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "puesto_requerido": "personal_limpieza",
+        "experiencia_requerida": true,
+        "lugar_trabajo": "condominio"
+      }
+    },
+    {
+      "title": "Necesito Ayudante de Cocina para Restaurant",
+      "description": "Se necesita ayudante de cocina con experiencia para restaurante turístico.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "hosteleria-restaurantes-turismo",
+      "subSubcategorySlug": "ayudante-cocina",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "experiencia_requerida": true,
+        "tipo_negocio": "restaurante_turistico"
+      }
+    },
+    {
+      "title": "Necesito Mozo con Inglés Básico",
+      "description": "Se necesita mozo con experiencia e inglés básico para restaurante.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "hosteleria-restaurantes-turismo",
+      "subSubcategorySlug": "mozo-azafata",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "experiencia_requerida": true,
+        "conocimientos": ["ingles_basico"],
+        "tipo_negocio": "restaurante"
+      }
+    },
+    {
+      "title": "Necesito Jóvenes y Señoritas para Producción de Alimentos",
+      "description": "Se necesita personal (jóvenes y señoritas) para planta de producción de alimentos.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "produccion-operarios-almacen",
+      "subSubcategorySlug": "operario-produccion",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "lugar_trabajo": "planta_produccion_alimentos"
+      }
+    },
+    {
+      "title": "Necesito Empleada del Hogar Cama Adentro",
+      "description": "Se necesita empleada del hogar cama adentro, con experiencia.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "trabajo-domestico",
+      "subSubcategorySlug": "empleado-hogar-todo-servicio",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "modalidad_trabajo": "cama_adentro",
+        "experiencia_requerida": true
+      }
+    },
+    {
+      "title": "Necesito Recepcionista para Hostal Turno Noche",
+      "description": "Se necesita recepcionista para hostal en turno noche. Se requiere conocimiento de inglés.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "hosteleria-restaurantes-turismo",
+      "subSubcategorySlug": "recepcionista-hotel",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "tipo_negocio": "hostal",
+        "horario": "turno_noche",
+        "conocimientos": ["ingles"]
+      }
+    }
+  ]

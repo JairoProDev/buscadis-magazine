@@ -1,0 +1,199 @@
+[
+    {
+      "title": "Necesito Recepcionista con Inglés para Hotel",
+      "description": "Se necesita recepcionista con dominio de inglés para hotel.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "hosteleria-restaurantes-turismo",
+      "subSubcategorySlug": "recepcionista-hotel",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "conocimientos": ["ingles_dominio"],
+        "tipo_negocio": "hotel"
+      }
+    },
+    {
+      "title": "Necesito Vendedor(a) para Tienda de Ropa",
+      "description": "Se necesita vendedor o vendedora con experiencia para tienda de ropa.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "ventas-comercial-marketing",
+      "subSubcategorySlug": "vendedor-ejecutivo-cuentas",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "experiencia_requerida": true,
+        "tipo_negocio": "tienda_ropa"
+      }
+    },
+    {
+      "title": "Necesito Asistente Administrativo Contable",
+      "description": "Se necesita asistente administrativo con conocimientos contables.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "oficina",
+      "subSubcategorySlug": "asistente-administrativo",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "conocimientos": ["contabilidad"]
+      }
+    },
+    {
+      "title": "Necesito Operario de Limpieza",
+      "description": "Se necesita operario de limpieza con experiencia.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "construccion-mantenimiento-oficios",
+      "subSubcategorySlug": "tecnico-mantenimiento-general",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "puesto_requerido": "operario_limpieza",
+        "experiencia_requerida": true
+      }
+    },
+    {
+      "title": "Necesito Ayudante General para Taller",
+      "description": "Se necesita ayudante general para taller. No requiere experiencia.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "produccion-operarios-almacen",
+      "subSubcategorySlug": "operario-produccion",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "puesto_requerido": "ayudante_general",
+        "experiencia_requerida": false,
+        "lugar_trabajo": "taller"
+      }
+    },
+    {
+      "title": "Necesito Profesor(a) de Inglés",
+      "description": "Se necesita profesor(a) de inglés con experiencia.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "educacion-docencia",
+      "subSubcategorySlug": "profesor-idiomas",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "experiencia_requerida": true,
+        "area_ensenanza": "ingles"
+      }
+    },
+    {
+      "title": "Necesito Costurero(a) con Experiencia en Arreglos",
+      "description": "Se necesita costurero(a) con experiencia en arreglos de ropa.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "produccion-operarios-almacen",
+      "subSubcategorySlug": "costurero-textil",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "experiencia_requerida": true,
+        "especialidad": "arreglos_ropa"
+      }
+    },
+    {
+      "title": "Necesito Personal para Lavado de Autos",
+      "description": "Se necesita personal para lavado de autos (carwash). Con o sin experiencia.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "otros-empleos",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "puesto_requerido": "lavador_autos",
+        "experiencia_requerida": "con_o_sin_experiencia"
+      }
+    },
+    {
+      "title": "Necesito Chofer con Licencia A2B",
+      "description": "Se necesita chofer con licencia A2B y experiencia.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "transporte-logistica-choferes",
+      "subSubcategorySlug": "chofer-a1-a2a-a2b",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "licencia_requerida": "A2B",
+        "experiencia_requerida": true
+      }
+    },
+    {
+      "title": "Necesito Vigilante para Condominio",
+      "description": "Se necesita vigilante con experiencia para condominio.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "seguridad-vigilancia",
+      "subSubcategorySlug": "agente-seguridad-vigilante",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "experiencia_requerida": true,
+        "lugar_trabajo": "condominio"
+      }
+    },
+    {
+      "title": "Necesito Señora para Cuidado de Niños",
+      "description": "Se necesita señora responsable para cuidado de niños.",
+      "images": [],
+      "categorySlug": "empleos",
+      "subcategorySlug": "trabajo-domestico",
+      "subSubcategorySlug": "ninera-babysitter",
+      "location": {
+        "province": "Cusco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "puesto_requerido": "cuidadora_ninos",
+        "requisitos": ["responsable"]
+      }
+    }
+  ]

@@ -1,0 +1,196 @@
+[
+    {
+      "title": "Alquilo Departamento Amoblado 3 Dormitorios - Urb. Kennedy A",
+      "description": "Alquilo departamento amoblado en 4to piso, Urb. Kennedy A. Consta de 3 dormitorios, sala-comedor, cocina, lavandería, 2 baños. Ideal para familia corta o ejecutivos.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Urb. Kennedy A"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "amoblado": "si",
+        "piso": 4,
+        "dormitorios": 3,
+        "banos": 2,
+        "ambientes": ["sala_comedor", "cocina", "lavanderia"],
+        "publico_objetivo": "familia_corta_o_ejecutivos"
+      }
+    },
+    {
+      "title": "Alquilo Habitación Estudiante con Baño Compartido - Urb. Kennedy A",
+      "description": "Alquilo habitación para estudiante (varón o mujer), con baño compartido. Servicios incluidos: agua caliente, luz, internet. Precio S/300.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "habitaciones",
+      "subSubcategorySlug": "compartida-estudiantes",
+      "amount": 300,
+      "currency": "PEN",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Urb. Kennedy A"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "bano_compartido": true,
+        "servicios_incluidos": ["agua_caliente", "luz", "internet"],
+        "publico_objetivo": "estudiante"
+      }
+    },
+    {
+      "title": "Alquilo Mini Departamento con Cochera - San Sebastián",
+      "description": "Se alquila mini departamento en 1er piso. Consta de 1 dormitorio, sala-comedor, cocina-lavandería, baño. Incluye cochera. Ubicado en 5to paradero San Sebastián.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estudio-loft",
+      "location": {
+        "province": "Cusco",
+        "district": "San Sebastián",
+        "referencePoint": "5to paradero San Sebastián"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "piso": 1,
+        "dormitorios": 1,
+        "banos": 1,
+        "ambientes": ["sala_comedor", "cocina_lavanderia"],
+        "cocheras": 1
+      }
+    },
+    {
+      "title": "Vendo Terreno 1000m² Vista Panorámica - Cristo Blanco",
+      "description": "Vendo terreno de 1000m² en Cristo Blanco, con vista panorámica a la ciudad. Documentos en regla.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "terrenos-lotes",
+      "subSubcategorySlug": "terreno-urbano-residencial",
+      "location": {
+        "province": "Cusco",
+        "district": "Cusco",
+        "address": "Zona Cristo Blanco"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "area_m2": 1000,
+        "vista_panoramica": true,
+        "documentacion_regla": true
+      }
+    },
+    {
+      "title": "Alquilo Departamento 2 Dormitorios - Urb. Los Portales",
+      "description": "Alquilo departamento en 1er piso. Consta de 2 dormitorios, sala-comedor, cocina, baño, patio, lavandería.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "address": "Urb. Los Portales"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "piso": 1,
+        "dormitorios": 2,
+        "banos": 1,
+        "ambientes": ["sala_comedor", "cocina", "patio", "lavanderia"]
+      }
+    },
+    {
+      "title": "Vendo Casa 4 Pisos + Tienda - San Sebastián",
+      "description": "Vendo casa de 4 pisos con tienda comercial en el primer nivel. Ideal para vivienda y negocio. Ubicada en San Sebastián, cerca a la Vía Expresa.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "casas",
+      "subSubcategorySlug": "casa-urbana",
+      "location": {
+        "province": "Cusco",
+        "district": "San Sebastián",
+        "referencePoint": "Cerca a la Vía Expresa"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "pisos": 4,
+        "incluye_local_comercial": true
+      }
+    },
+    {
+      "title": "Alquilo Oficina 50m² Céntrica - Av. El Sol",
+      "description": "Alquilo oficina de 50m² en 2do piso, ubicada en plena Av. El Sol. Ideal para consultorio, estudio contable, etc.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "oficinas",
+      "subSubcategorySlug": "oficina-independiente-privada",
+      "location": {
+        "province": "Cusco",
+        "district": "Cusco",
+        "address": "Av. El Sol"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "area_m2": 50,
+        "piso": 2,
+        "ubicacion_centrica": true
+      }
+    },
+    {
+      "title": "Alquilo Departamento 3 Dormitorios - San Judas Chico",
+      "description": "Alquilo departamento en 2do piso. Consta de 3 dormitorios, sala-comedor, cocina, baño, lavandería.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "address": "San Judas Chico"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "piso": 2,
+        "dormitorios": 3,
+        "banos": 1,
+        "ambientes": ["sala_comedor", "cocina", "lavanderia"]
+      }
+    },
+    {
+      "title": "Vendo Terreno 200m² - San Sebastián, Por Colegio",
+      "description": "Vendo terreno de 200m², papeles en regla. Ubicado en San Sebastián, por el Colegio Simón Bolívar.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "terrenos-lotes",
+      "subSubcategorySlug": "terreno-urbano-residencial",
+      "location": {
+        "province": "Cusco",
+        "district": "San Sebastián",
+        "referencePoint": "Por el Colegio Simón Bolívar"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "area_m2": 200,
+        "documentacion_regla": true
+      }
+    }
+  ]

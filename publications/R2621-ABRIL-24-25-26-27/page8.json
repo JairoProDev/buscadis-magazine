@@ -1,0 +1,180 @@
+[
+    {
+      "title": "Alquilo Mini Departamento Amoblado - Urb. Kennedy A",
+      "description": "Se alquila mini departamento amoblado en 3er piso. Consta de 1 dormitorio, salita-cocina y baño. Incluye agua caliente, luz, internet, cable. Ideal para persona sola o pareja que trabaje. Precio S/800.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estudio-loft",
+      "amount": 800,
+      "currency": "PEN",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Urb. Kennedy A"
+      },
+      "contact": {
+        "phones": ["932320380", "958300819"]
+      },
+      "attributes": {
+        "amoblado": "si",
+        "piso": 3,
+        "dormitorios": 1,
+        "banos": 1,
+        "ambientes": ["salita_cocina"],
+        "servicios_incluidos": ["agua_caliente", "luz", "internet", "cable"],
+        "publico_objetivo": "persona_sola_o_pareja_trabajadora"
+      }
+    },
+    {
+      "title": "Anticresis Departamento 2 Dormitorios - Urb. Bancopata",
+      "description": "Doy en anticresis departamento en 3er piso. Consta de 2 dormitorios, sala-comedor, cocina, baño y lavandería. Servicios independientes. Ubicado en Urb. Bancopata.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "district": "Santiago",
+        "address": "Urb. Bancopata"
+      },
+      "contact": {
+        "phones": ["974727179"]
+      },
+      "attributes": {
+        "tipo_contrato": "anticresis",
+        "piso": 3,
+        "dormitorios": 2,
+        "banos": 1,
+        "ambientes": ["sala_comedor", "cocina", "lavanderia"],
+        "servicios_independientes": true
+      }
+    },
+    {
+      "title": "Vendo Lote 150m² Excelente Ubicación - Urb. Velasco Astete",
+      "description": "Vendo lote de 150m² en excelente ubicación, con todos los documentos en regla. Trato directo con propietario.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "terrenos-lotes",
+      "subSubcategorySlug": "terreno-urbano-residencial",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Urb. Velasco Astete, Zona A"
+      },
+      "contact": {
+        "phones": ["974397693"]
+      },
+      "attributes": {
+        "area_m2": 150,
+        "documentacion_regla": true,
+        "trato_directo": true
+      }
+    },
+    {
+      "title": "Alquilo Departamento 3 Dormitorios Estreno - Av. Costanera",
+      "description": "Se alquila departamento de estreno en 5to piso, con ascensor. Consta de 3 dormitorios, sala-comedor, cocina con reposteros, 2 baños, lavandería. Medidores independientes. Ubicado en Av. Costanera.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "address": "Av. Costanera"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "condicion": "estreno",
+        "piso": 5,
+        "ascensor": true,
+        "dormitorios": 3,
+        "banos": 2,
+        "ambientes": ["sala_comedor", "cocina", "lavanderia"],
+        "caracteristicas_adicionales": ["cocina_reposteros", "medidores_independientes"]
+      }
+    },
+    {
+      "title": "Vendo Casa Material Noble 2 Pisos 150m² - San Sebastián",
+      "description": "Por motivo de viaje, vendo casa de material noble de 2 pisos. Área de terreno 150m². Ubicada en Urb. Villa El Sol, San Sebastián.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "casas",
+      "subSubcategorySlug": "casa-urbana",
+      "location": {
+        "province": "Cusco",
+        "district": "San Sebastián",
+        "address": "Urb. Villa El Sol"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "area_terreno_m2": 150,
+        "pisos": 2,
+        "material_construccion": "noble",
+        "motivo_venta": "viaje"
+      }
+    },
+    {
+      "title": "Alquilo Departamento 2 Dormitorios - Céntrico, Cerca a Correo",
+      "description": "Alquilo departamento de 2 dormitorios, sala-comedor, cocina, baño y lavandería. Ubicado en zona céntrica, a media cuadra del Correo Central.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "district": "Cusco",
+        "referencePoint": "A media cuadra del Correo Central"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "dormitorios": 2,
+        "banos": 1,
+        "ambientes": ["sala_comedor", "cocina", "lavanderia"],
+        "ubicacion_centrica": true
+      }
+    },
+    {
+      "title": "Alquilo Local Comercial 80m² - Av. Huayruropata",
+      "description": "Se alquila local comercial de 80m² en Av. Huayruropata. Ideal para diversos negocios.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "locales-comerciales",
+      "subSubcategorySlug": "tienda-puerta-calle",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Av. Huayruropata"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "area_m2": 80
+      }
+    },
+    {
+      "title": "Alquilo Tienda 100m² - Urb. Progreso",
+      "description": "Alquilo tienda de 100m² en Urb. Progreso. Excelente ubicación para negocio.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "locales-comerciales",
+      "subSubcategorySlug": "tienda-puerta-calle",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Urb. Progreso"
+      },
+      "contact": {
+        "phones": ["984119112"]
+      },
+      "attributes": {
+        "area_m2": 100
+      }
+    }
+  ]

@@ -1,0 +1,187 @@
+[
+    {
+      "title": "Alquiler Habitación Amoblada en Urb. Santa Mónica",
+      "description": "Se alquila habitación amplia y amoblada para señorita o pareja que trabaje. Baño compartido (solo con una persona). Incluye servicios básicos (agua caliente, luz, internet). Ubicación segura.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "habitaciones",
+      "subSubcategorySlug": "doble-matrimonial",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Urb. Santa Mónica C-8"
+      },
+      "contact": {
+        "phones": ["993811415"]
+      },
+      "attributes": {
+        "amoblado": "si",
+        "servicios_incluidos": ["agua_caliente", "luz", "internet"],
+        "bano_compartido": true,
+        "publico_objetivo": "señorita_o_pareja_trabajadora"
+      }
+    },
+    {
+      "title": "Alquilo Departamento Estreno 3 Dormitorios - Urb. Progreso",
+      "description": "Se alquila departamento de estreno en 4to piso. Consta de 3 dormitorios (2 con ropero empotrado), sala-comedor, cocina con reposteros altos/bajos, 2 baños, lavandería. Incluye terma solar. Medidor de luz independiente.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Urb. Progreso, Calle Lorenzo K.",
+        "referencePoint": "Pasando la Av. Faucett"
+      },
+      "contact": {
+        "phones": ["984661693", "984765611"]
+      },
+      "attributes": {
+        "dormitorios": 3,
+        "banos": 2,
+        "piso": 4,
+        "condicion": "estreno",
+        "caracteristicas_adicionales": ["roperos_empotrados", "cocina_reposteros", "lavanderia", "terma_solar", "medidor_luz_independiente"]
+      }
+    },
+    {
+      "title": "Vendo Terreno 142m² con Construcción - Santa Rosa",
+      "description": "Ocasión: Vendo terreno de 142m² en zona Santa Rosa (parte baja). Cuenta con pequeña construcción de material noble. Todos los servicios básicos y documentos en regla. Precio a tratar.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "terrenos-lotes",
+      "subSubcategorySlug": "terreno-urbano-residencial",
+      "negotiable": true,
+      "location": {
+        "province": "Cusco",
+        "district": "San Sebastián",
+        "address": "Zona Santa Rosa (Parte Baja)"
+      },
+      "contact": {
+        "phones": ["984486065", "974361194"]
+      },
+      "attributes": {
+        "area_m2": 142,
+        "infraestructura_existente": ["construccion_material_noble_pequena"],
+        "servicios_basicos": true,
+        "documentacion_regla": true
+      }
+    },
+    {
+      "title": "Anticresis Departamento 2 Dormitorios - Urb. Kennedy \"A\"",
+      "description": "Doy en anticresis departamento en 3er piso. Consta de 2 dormitorios, sala-comedor, cocina, baño y lavandería. Entrada independiente.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Urb. Kennedy \"A\", Av. Garcilaso L-14"
+      },
+      "contact": {
+        "phones": ["958189663"]
+      },
+      "attributes": {
+        "tipo_contrato": "anticresis",
+        "dormitorios": 2,
+        "banos": 1,
+        "piso": 3,
+        "entrada_independiente": true,
+        "ambientes": ["sala_comedor", "cocina", "lavanderia"]
+      }
+    },
+    {
+      "title": "Anticresis Mini Departamento en 1er Piso - San Sebastián",
+      "description": "Doy en anticresis mini departamento en 1er piso, ideal para pareja sola o persona sola. Entrada independiente.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estudio-loft",
+      "location": {
+        "province": "Cusco",
+        "district": "San Sebastián",
+        "address": "Prolong. Av. La Cultura, 4to Paradero"
+      },
+      "contact": {
+        "phones": ["984481760"]
+      },
+      "attributes": {
+        "tipo_contrato": "anticresis",
+        "piso": 1,
+        "entrada_independiente": true,
+        "publico_objetivo": "pareja_sola_o_persona_sola"
+      }
+    },
+    {
+      "title": "Alquilo Departamento 3 Dormitorios - Condominio Parque K.",
+      "description": "Alquilo departamento en Condominio Parque K. Consta de 3 dormitorios, sala-comedor, cocina, lavandería, 2 SSHH. Dispone de ascensor.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estandar",
+      "location": {
+        "province": "Cusco",
+        "district": "Wanchaq",
+        "address": "Condominio Parque K."
+      },
+      "contact": {
+        "phones": ["984140032"]
+      },
+      "attributes": {
+        "dormitorios": 3,
+        "banos": 2,
+        "ambientes": ["sala_comedor", "cocina", "lavanderia"],
+        "ascensor": true
+      }
+    },
+    {
+      "title": "Alquilo Mini Departamento Interior 1er Piso - Av. Collasuyo",
+      "description": "Se alquila mini departamento interior en 1er piso. Consta de dormitorio, cocina-comedor, baño y patio. Ideal para persona sola o pareja.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "departamentos",
+      "subSubcategorySlug": "estudio-loft",
+      "location": {
+        "province": "Cusco",
+        "address": "Av. Collasuyo A-6",
+        "referencePoint": "Costado Grifo Puma"
+      },
+      "contact": {
+        "phones": ["984761680", "974397693"]
+      },
+      "attributes": {
+        "dormitorios": 1,
+        "banos": 1,
+        "piso": 1,
+        "ubicacion_interna": true,
+        "ambientes": ["cocina_comedor", "patio"],
+        "publico_objetivo": "persona_sola_o_pareja"
+      }
+    },
+    {
+      "title": "Vendo Lotes 150m² Documentos Saneados - Urb. Cruz Verde, San Sebastián",
+      "description": "Oportunidad: Vendo lotes de terreno de 150m² cada uno. Cuentan con todos los servicios y documentos completamente saneados. Precio $37,000 USD a tratar.",
+      "images": [],
+      "categorySlug": "inmuebles",
+      "subcategorySlug": "terrenos-lotes",
+      "subSubcategorySlug": "terreno-urbano-residencial",
+      "amount": 37000,
+      "currency": "USD",
+      "negotiable": true,
+      "location": {
+        "province": "Cusco",
+        "district": "San Sebastián",
+        "address": "Urb. Cruz Verde"
+      },
+      "contact": {
+        "phones": ["974791034", "928706623"]
+      },
+      "attributes": {
+        "area_m2": 150,
+        "servicios_basicos": true,
+        "documentacion_regla": true
+      }
+    }
+  ]
