@@ -1,0 +1,15 @@
+{
+  "name": "publication-uploader",
+  "version": "1.0.0",
+  "description": "Standalone tool for uploading publications to Buscadis database",
+  "main": "uploader.js",
+  "scripts": {
+    "start": "node uploader.js",
+    "dry-run": "node uploader.js --dry-run"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "mongodb": "^5.1.0"
+  },
+  "private": true
+} 

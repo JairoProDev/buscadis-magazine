@@ -1,0 +1,54 @@
+[
+  {
+    "title": "Test Publication from Uploader",
+    "description": "This is a test publication to validate the uploader tool works correctly. This publication was created by the standalone uploader tool.",
+    "category": "inmuebles",
+    "subcategory": "casas",
+    "subsubcategory": "casa-urbana",
+    "price": 250000,
+    "currency": "PEN",
+    "status": "active",
+    "contactPhone": "999123456",
+    "contactEmail": "test@example.com",
+    "location": {
+      "city": "Cusco",
+      "district": "San Sebastián",
+      "region": "Cusco"
+    },
+    "features": {
+      "operation_type": "venta",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "area": 150
+    },
+    "images": [
+      "/images/placeholder/house-1.jpg"
+    ],
+    "tags": ["test", "uploader"]
+  },
+  {
+    "title": "Second Test Publication",
+    "description": "This is another test publication in the same file.",
+    "category": "vehiculos",
+    "subcategory": "autos",
+    "subsubcategory": "sedan",
+    "price": 15000,
+    "currency": "PEN",
+    "status": "active",
+    "contactPhone": "999654321",
+    "location": {
+      "city": "Cusco",
+      "district": "Wanchaq"
+    },
+    "features": {
+      "year": 2019,
+      "mileage": 45000,
+      "fuel": "gasolina",
+      "transmission": "manual",
+      "condition": "used"
+    },
+    "images": [
+      "/images/placeholder/car-1.jpg"
+    ]
+  }
+] 
